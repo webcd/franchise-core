@@ -1,0 +1,109 @@
+// Transition
+
+@mixin transition($args) {
+  transition: $args;
+}
+
+// Clearfix
+
+@mixin clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+// String Replace
+
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+// Font Face
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+// underline title or any html tag with a span inside it
+
+@mixin underline($titleBackground, $color, $fontSize, $fontColor) {
+	margin: 0;
+	text-align: center;
+	position: relative;
+	margin-bottom: $gutter + $gutter-half;
+	
+	span {
+		position: relative;
+		display: inline-block;
+		background: $titleBackground;
+		font-size: $fontSize;
+		font-weight: normal;
+		color: $fontColor;
+		text-transform: uppercase;
+		padding: 0 $gutter 0 2rem;
+		line-height: 1;
+		z-index: 10;
+
+		.arrow-icon {
+			display: none;
+
+			@include bp('xs') { 
+				display: inline;
+				fill: $fontColor;
+				transform: rotate(90deg) translateX($gutter-quarter) translateY(- $gutter-quarter);
+			}
+		}
+	}
+	&:before {
+      content:'';
+      display: block;
+      height: 0.4rem;
+      margin: $gutter 0;
+      background: $underline-color-dark;
+    }
+	@include bp('sm') { 
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 0.4rem;
+			margin: 0;
+			background: $color;
+			top: 58%;
+			transform: translateY(50%);
+			z-index: 0;
+		}
+	}
+}

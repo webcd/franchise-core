@@ -1,0 +1,126 @@
+////////////////////////////////////////////////////////////////////////////////
+// Navbar - Menu
+
+/* ------------------------------------------------------------------------------------------------
+											Navbar - Menu  
+------------------------------------------------------------------------------------------------ */
+
+.menu {
+	opacity: 0;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow-y: scroll;
+    position: fixed;
+    transform: scale(1);
+    background: rgba($gray-base, 0.8);
+    text-align: center;
+    //visibility: hidden;
+    z-index: 1000;
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+   	transition: opacity .2s ease;
+		
+
+	ul {
+		display: block;
+		transition: transform 0.4s ease;
+		text-align: left;
+		transform: translate3d(0.5rem, -30rem, 0);
+
+		@include bp('xs') { 
+			transform: translate3d(2.4rem, -30rem, 0);
+		}
+
+		li {
+			list-style-type: none;
+
+			@for $i from 1 through 10 {
+				&:nth-child(#{$i}) {
+					opacity: 0;
+					transform: translate3d(0, 0, 0);
+					transition: all 0.2s ease;
+				}
+			}
+
+			a {
+				display: inline-block;
+				text-decoration: none;
+				color: white;
+				text-transform: uppercase;
+				font-size: $font-size-intermediate;
+				margin-bottom: $gutter; 
+				position: relative;
+				transition: color .2s ease;
+
+				&:hover {
+					color: $color-primary;
+
+					&:before {
+						content:'|';
+						font-weight: bold;
+						font-size: $font-size-intermediate;
+						position: absolute;
+						left: -2rem;
+						top: -0.2rem;
+					}
+				}
+			}
+		}
+	}
+    &.visible {
+	    opacity: 1;
+	    height: 100%;
+	    width: 100%;
+	    transition: height 0ms 0ms,opacity 200ms ease-out,visibility 0ms,width 0ms,-webkit-transform 200ms ease-out;
+    	transition: height 0ms 0ms,opacity 200ms ease-out,transform 200ms ease-out,visibility 0ms,width 0ms;
+    	transition: height 0ms 0ms,opacity 200ms ease-out,transform 200ms ease-out,visibility 0ms,width 0ms,-webkit-transform 200ms ease-out;
+	    //visibility: visible;
+
+	    ul {
+			display: block;
+			transition: transform 400ms ease-out;
+			transform: translate3d(0.5rem, 8rem, 0);
+
+			@include bp('xs') { 
+				transform: translate3d(2.4rem, 10rem, 0);
+			}
+			
+			li {
+				@for $i from 1 through 10 {
+					&:nth-child(#{$i}) {
+						opacity: 1;
+						transform: translate3d(0, $i * $gutter-half, 0);
+						transition: all 0.25s ease;
+						transition-delay: $i * 0.05s;
+					}
+				}
+			}
+		}
+	}
+	&.invisible {
+		opacity: 0;
+		transition: height 0ms 200ms,opacity 200ms ease-in,visibility 200ms,width 0ms 200ms,-webkit-transform 200ms ease-in;
+    	transition: height 0ms 200ms,opacity 200ms ease-in,transform 200ms ease-in,visibility 200ms,width 0ms 200ms;
+    	transition: height 0ms 200ms,opacity 200ms ease-in,transform 200ms ease-in,visibility 200ms,width 0ms 200ms,-webkit-transform 200ms ease-in;
+	}
+	nav {
+		position: relative;
+	}
+	.menu-close {
+	    border: 0;
+	    top: $gutter-quarter;
+	    right: $gutter-quarter;
+	    font-size: $gutter-double;
+	    line-height: 1;
+	    color: white;
+	    position: absolute;
+	    cursor: pointer;
+	    -webkit-tap-highlight-color: transparent;
+	}
+}
+
+
+

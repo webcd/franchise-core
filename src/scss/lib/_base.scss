@@ -1,0 +1,25 @@
+/* BASE */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+// Avoid 150px height default behaviour
+.inline-svg { svg { display: none; } }
+
+// Responsive images by default
+img { max-width: 100%; }
+
+.align-left { text-align: left; }
+.align-center { text-align: center; }
+.align-right { text-align: right; }
+
+.full-w-min {
+	@include bp('xs', true){ width: 100%; }
+}
+.full-w-xs {
+	@include bp('sm', true){ width: 100%; }
+}
+.full-w-sm {
+	@include bp('md', true){ width: 100%; }
+}

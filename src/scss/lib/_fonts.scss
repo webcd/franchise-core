@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../../dist/fonts/Arsenal-Regular.otf') format('otf'),
+  url('../../dist/fonts/Arsenal-Regular.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../../dist/fonts/Arsenal-Bold.otf') format('otf'),
+  url('../../dist/fonts/Arsenal-Bold.ttf')  format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../../dist/fonts/Arsenal-Italic.otf') format('otf'),
+  url('../../dist/fonts/Arsenal-Italic.ttf')  format('truetype');
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Arsenal';
+  src: url('../../dist/fonts/Arsenal-BoldItalic.otf') format('otf'),
+  url('../../dist/fonts/Arsenal-BoldItalic.ttf')  format('truetype');
+  font-style: italic, oblique;
+}
+
+
+
+@font-face {
+  font-family: 'Brandon';
+  src: url('../../dist/fonts/Brandon_reg.otf') format('otf'),
+  url('../../dist/fonts/Brandon_reg.ttf') format('truetype'),
+  url('../../dist/fonts/Brandon_reg.woff') format('woff');
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('../../dist/fonts/Brandon_bld.otf') format('otf'),
+  url('../../dist/fonts/Brandon_bld.ttf') format('truetype'),
+  url('../../dist/fonts/Brandon_bld.woff') format('woff');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('../../dist/fonts/brandon_thin.otf') format('otf'),
+  url('../../dist/fonts/brandon_thin.ttf') format('truetype'),
+  url('../../dist/fonts/brandon_thin.woff') format('woff');
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('../../dist/fonts/Brandon_reg_it.otf') format('otf'),
+  url('../../dist/fonts/Brandon_reg_it.ttf') format('truetype'),
+  url('../../dist/fonts/Brandon_reg_it.woff') format('woff');
+  font-style: italic;
+}

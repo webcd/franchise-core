@@ -1,0 +1,110 @@
+/* FLEXGRID */
+
+$n-col-max: 12;
+
+.flexrow {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex: 0 0 calc(100% - 2.4rem);
+  }
+}
+
+.flexline {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+$prefix-flex: 'flex-';
+$prefix-visible: 'visible-';
+$prefix-invisible: 'invisible-';
+
+@each $breakpoint-name, $breakpoint-width in $breakpoints {
+
+  @include bp($breakpoint-name) {
+
+    // OMG...
+    .#{$prefix-flex}#{$breakpoint-name}-1 { flex-basis: calc(8.33% - 2.4rem); max-width: calc(8.33% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-2 { flex-basis: calc(16.66% - 2.4rem); max-width: calc(16.66% - 2.4rem);  }
+    .#{$prefix-flex}#{$breakpoint-name}-3 { flex-basis: calc(25% - 2.4rem); max-width: calc(25% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-4 { flex-basis: calc(33.33% - 2.4rem); max-width: calc(33.33% - 2.4rem);  }
+    .#{$prefix-flex}#{$breakpoint-name}-5 { flex-basis: calc(41.66% - 2.4rem); max-width: calc(41.66% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-6 { flex-basis: calc(50% - 2.4rem); max-width: calc(50% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-7 { flex-basis: calc(58.33% - 2.4rem); max-width: calc(58.33% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-8 { flex-basis: calc(66.66% - 2.4rem); max-width: calc(66.66% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-9 { flex-basis: calc(75% - 2.4rem); max-width: calc(75% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-10 { flex-basis: calc(83.33% - 2.4rem); max-width: calc(83.33% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-11 { flex-basis: calc(91.66% - 2.4rem); max-width: calc(91.66% - 2.4rem); }
+    .#{$prefix-flex}#{$breakpoint-name}-12 { flex-basis: calc(100% - 2.4rem); max-width: calc(100% - 2.4rem); }
+
+    // creating visible class for each max-width breakpoints
+    .#{$prefix-visible}#{$breakpoint-name} { display: flex !important; }
+
+    // @for $i from 1 through $n-col-max {
+    //   .#{$prefix-flex}#{$breakpoint-name}-#{$i} {
+    //     flex-basis: (100% * $i / $n-col-max);
+    //   }
+    // }
+  }
+}
+
+@each $breakpoint-name, $breakpoint-width in $breakpoints {
+
+  // creating invisible class for each max-width breakpoints
+  @include bp($breakpoint-name, true) {
+
+    .#{$prefix-invisible}#{$breakpoint-name} { display: none !important; }
+
+  }
+}
+
+// need to be cleaned with extend or something nicer
+
+.flexrow--gutter {
+  margin-left: -$gutter-half;
+  margin-right: -$gutter-half;
+
+  > * {
+    margin: $gutter-half;
+  }
+}
+
+.flexrow--h-gutter {
+  margin-left: -$gutter-half;
+  margin-right: -$gutter-half;
+
+  > * {
+    margin: 0 $gutter-half;
+  }
+}
+
+.flexrow--padding-gutter {
+  padding-left: -$gutter-half;
+  padding-right: -$gutter-half;
+
+  > * {
+    margin: $gutter-half;
+  }
+}
+
+.flexrow--h-padding-gutter {
+  padding-left: -$gutter-half;
+  padding-right: -$gutter-half;
+
+  > * {
+    margin: 0 $gutter-half;
+  }
+}
+
+.flexrow--grow {
+  flex: 1 0 calc(100% - 2.4rem);
+}
+
+.align-items-center {
+  align-items: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}

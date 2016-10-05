@@ -1,0 +1,196 @@
+// LENGTH UNITS HELPERS
+
+$px-by-rem-ratio: 10;  // By convention, shouldn't change
+
+// STRIP UNIT
+
+// See: https://css-tricks.com/snippets/sass/strip-unit-function/
+
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+
+// PIXELS AND REM CONVERSION
+
+@function px2rem($value, $strip-unit: "no-strip") {
+
+  @if type-of($value) == 'number' {
+    $v: 0;
+
+    @if unitless($value) {
+      $v: ($value / 10 * 1rem);
+    } @else {
+      $v: ($value / 10px * 1rem);
+    }
+
+    @if $strip-unit == 'strip' {
+      @return strip-unit($v);
+    } @else {
+      @return $v;
+    }
+
+  } @else { @error "ERROR: function px2rem() needs a number value!"; }
+}
+
+@function rem2px($value, $strip-unit: "no-strip") {
+  @if type-of($value) == 'number' {
+    $v: 0;
+
+    @if unitless($value) {
+      $v: ($value * 10px);
+    } @else {
+      $v: (strip-unit($value) * 10px);
+    }
+
+    @if $strip-unit == 'strip' {
+      @return strip-unit($v);
+    } @else {
+      @return $v;
+    }
+
+  } @else { @error "ERROR: function rem2px() needs a number value!"; }
+}
+
+// TESTS
+
+// @warn px2rem(48);
+// @warn px2rem(48px);
+// @warn px2rem(48, 'strip');
+// @warn px2rem(48px, 'strip');
+// @warn rem2px(3.2);
+// @warn rem2px(3.2rem);
+// @warn rem2px(3.2, 'strip');
+// @warn rem2px(3.2rem, 'strip');
+
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-family: $font-family-base;
+}
+
+
+h1, .h1 { font-size: $font-size-h1; font-weight: $font-weight-h1; color: $color-h1 }
+h2, .h2 { font-size: $font-size-h2; font-weight: $font-weight-h2; color: $color-h2 }
+h3, .h3 { font-size: $font-size-h3; font-weight: $font-weight-h3; color: $color-h3 }
+h4, .h4 { font-size: $font-size-h4; font-weight: $font-weight-h4; color: $color-h4 }
+h5, .h5 { font-size: $font-size-h5; font-weight: $font-weight-h5; color: $color-h5 }
+h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-h6 }
+
+.light-underline-title {
+  @include underline($primary-wrapper-color, $underline-color-light, $font-size-mega, #fff);
+}
+
+.dark-underline-title {
+  @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
+}
+
+.dark-underline-title--double {
+  @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
+
+  span:first-child {
+    transform: translateY($gutter);
+  }
+  span:last-child {
+    text-transform: inherit;
+    font-weight: normal;
+    transform: translateY($gutter);
+    display: inline-block;
+    margin-bottom: $gutter;
+  }
+}
+
+.dark-underline-title--icon {
+  @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
+   
+  svg:first-child {
+    margin-left: 50%;
+    margin-bottom: $gutter-quarter;
+    transform: translateX(-50%);
+    display: block; 
+  }
+
+  @include bp(xs){
+    svg:first-child  {
+      margin: 0;
+      display: inline;
+      transform: translateX(0) translateY(1.2rem);
+    }
+  }
+}
+
+.title-big {
+  font-size: $font-size-intermediate * 2;
+  text-transform: uppercase;
+  color: black;
+  line-height: 1;
+}
+.title-small {
+  font-size: $font-size-base;
+  text-transform: uppercase;
+  color: black;
+  line-height: 1;
+}
+
+.bullet-list {
+    list-style: none;
+    padding:0;
+    margin: $gutter 0;
+
+    li {
+      position: relative;
+      padding-left: 2rem; 
+      margin-top: $gutter-half;
+      line-height: 1.2;
+
+      &:before {
+        content: "• ";
+        line-height: 0.3;
+        color: $color-primary;
+        font-size: 3rem;
+        position: absolute;
+        top: $gutter-quarter;
+        left: 0;
+    }
+  }
+}
+
+.see-more {
+  color: $gray-light;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: $font-size-small;
+
+  &:hover {
+    color: $gray;
+  }
+}
+
+
+.ultra        { font-size: $font-size-ultra; }
+.giga         { font-size: $font-size-giga; }
+.mega         { font-size: $font-size-mega; }
+.big          { font-size: $font-size-large; }
+.intermediate { font-size: $font-size-intermediate; }
+.medium       { font-size: $font-size-medium; }
+.small        { font-size: $font-size-small; }
+
+.uppercase    { text-transform: uppercase !important; }
+.lowercase    { text-transform: lowercase !important; }
+
+.bold         { font-weight: bold; }
+.normal       { font-weight: normal; }
+.italic       { font-style: italic; }
+

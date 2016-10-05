@@ -1,0 +1,35 @@
+/* LAYOUT */
+
+
+// STICKY FOOTER
+
+html, body, .site-wrapper { min-height: 100vh; }
+.site-wrapper { display: flex; flex-direction: column; }
+.site-content { flex-grow: 1; }
+
+.wrapper {
+	padding: $gutter 0;
+}
+
+// CONTAINER
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  $gutter-half;
+  padding-right: $gutter-half;
+  @include clearfix;
+
+  @include bp('sm') { width: $container-sm; }
+  @include bp('md') { width: $container-md; }
+  @include bp('lg') { width: $container-lg; }
+}
+
+.v-margin                   { margin-top: $gutter; margin-bottom: $gutter; }
+.v-margin-double            { margin-top: $gutter-double; margin-bottom: $gutter-double; }
+.v-top-margin               { margin-top: $gutter; }
+.v-top-margin-double        { margin-top: $gutter-double; }
+.v-bottom-margin            { margin-bottom: $gutter; }
+.v-bottom-margin-double     { margin-bottom: $gutter-double; }
+.h-padding                  { padding-left: $gutter; padding-right: $gutter; }
+.h-padding-double           { padding-left: $gutter-double; padding-right: $gutter-double; }

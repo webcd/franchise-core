@@ -1,0 +1,273 @@
+////////////////////////////////////////////////////////////////////////////////
+// Layout
+
+
+/* ------------------------------------------------------------------------------------------------
+									Generic content blocs 
+------------------------------------------------------------------------------------------------ */
+
+
+body {
+	background: #f1f1f1;
+}
+
+.site-wrapper {
+	//position: relative;
+	background: white;
+
+  	@include bp('lg') { 
+  		max-width: $site-wrapper-max-width; 
+  		margin: 0 auto; 
+  	}
+}
+
+.static-content {
+	a {
+		color: $color-primary;
+		text-decoration: none;
+	}
+	h2:first-child {
+		margin-top: 0;
+	}
+}
+
+.wrapper--content-info {
+	border-top: 0.1rem solid black;
+	padding: 0;
+
+	img {
+		width: 100%;
+	}
+	p, h2 {
+		padding: 0 $gutter-double 0 $gutter;
+		line-height: 1.3;
+	}
+}
+
+.wrapper--presentation {
+	background: $primary-wrapper-color;
+}
+
+
+/* ------------------------------------------------------------------------------------------------
+									items content blocs 
+------------------------------------------------------------------------------------------------ */
+
+
+.wrapper--large-items, .wrapper--large-items-row  {
+	article {
+		@include transition(all .2s ease);
+
+		&:hover {
+			color: white;
+			background: $color-primary;
+			@include transition(all .2s ease);
+
+			.large-item__date, 
+			.large-item__link,
+			.large-item__title,
+			.large-item__intro,
+			.large-item__see-more { color: white;  @include transition(all .2s ease); }
+			svg { fill: white; }
+		}
+	}
+}
+
+.wrapper--large-items {
+	article {
+		@include bp('xs', true) {
+			&:not(:last-child) {
+				border-bottom: 0.1rem solid $neutral-color;
+			}
+		}
+		@include bp('xs') {
+			&:not(:nth-last-child(-n+2)) {
+				border-bottom: 0.1rem solid $neutral-color;
+			}
+		}
+	}
+}
+
+.wrapper--large-items-row {
+	article {
+		&:not(:last-child) {
+			border-bottom: 0.1rem solid $neutral-color;
+		}
+	}
+}
+
+.wrapper--medium-items  {
+	article {
+		@include bp('md', true) {
+			&:not(:last-child) {
+				border-bottom: 0.1rem solid $neutral-color;
+			}
+		}
+		@include bp('md') {
+			&:not(:nth-last-child(-n+2)) {
+				border-bottom: 0.1rem solid $neutral-color;
+			}
+		}
+
+		@include transition(all .2s ease);
+
+		&:hover {
+			color: white;
+			background: $color-primary;
+			@include transition(all .2s ease);
+
+			.medium-item__title,
+			.medium-item__intro { color: white;  @include transition(all .2s ease); }
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------------------------------------------
+											Franchise detail 
+------------------------------------------------------------------------------------------------ */
+
+
+.wrapper--hiring {
+	background: $color-ternary;
+	padding: 0;
+	margin-top: $gutter-double;
+}
+
+
+/* ------------------------------------------------------------------------------------------------
+										 articles / news list
+------------------------------------------------------------------------------------------------ */
+
+
+.wrapper--news-list { 
+	article {
+		border-bottom: none;
+		background: white;
+		@include transition(all .2s $ease-classic);
+
+		&:hover {
+			background: $color-primary;
+		}
+
+		.large-item {
+			padding: $gutter $gutter $gutter-half 0;
+		}
+		.large-item__date {
+			text-transform: initial;
+			color: $gray-light;
+		}
+		.large-item__link {
+			color: $color-secondary;  
+		}
+		.large-item__title {
+			color: $gray-dark;
+
+			&:hover { 
+				color: $color-primary;  
+				@include transition(all .2s $ease-classic); 
+			}
+		}
+	}
+}
+
+.wrapper--articles-list { 
+	article {
+		background: white;
+		border-bottom: none;
+		@include transition(all .2s $ease-classic);
+		.large-item {
+			padding: $gutter-half $gutter;
+		}
+		.large-item__date {
+			text-transform: uppercase;
+			color: $gray-light;
+			font-size: $font-size-mini;
+		}
+		.large-item__see-more {
+			color: $gray-light;
+
+			svg { fill: $gray-light; }
+		}
+		.large-item__title {
+			color: $color-primary;
+			text-transform: initial;
+		}
+
+		&:hover {
+			background: $color-primary;
+
+			.large-item,
+			.large-item__date,
+			.large-item__see-more,
+			.large-item__title {
+				color: white; 
+				@include transition(all .2s $ease-classic); 
+
+				svg { fill: white; }
+			}
+		}
+	}
+}
+
+
+/* ------------------------------------------------------------------------------------------------
+										Hub
+------------------------------------------------------------------------------------------------ */
+
+
+.hub {
+	.hub__search-form {
+		background: $color-secondary;
+		display: flex;
+		flex-wrap: wrap;
+		padding: $gutter;
+
+		@include bp(xs){
+			margin-left: $gutter;
+			margin-right: $gutter;
+		}
+
+		.search-container {
+			flex: 1 0 calc(100% - 8rem);
+
+			.hub__search {
+				padding: $gutter-half;
+				border: none;
+			}
+		}
+		.button-container {
+			flex: 1 0 7rem;
+			text-align: center;
+			height: 4.2rem;
+
+			.hub__submit {
+				width: 5.5rem;
+				height: 5.5rem;
+				background: none;
+				border: none;
+				cursor: pointer;
+				outline: none;
+				padding: $gutter-quarter;
+				margin-top: -$gutter-quarter;
+
+				svg {
+					fill: white;
+					transform: rotate(0deg);
+					transition: transform 0.2s ease;
+				}
+			}
+			&:hover {
+				.hub__submit {
+					background: white;
+
+					svg {
+						fill: $color-secondary;
+						transform: rotate(7deg);
+						transition: transform 0.2s ease;
+					}
+				}
+			}
+		}
+	}
+}
