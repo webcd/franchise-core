@@ -91,10 +91,20 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
 
 .light-underline-title {
   @include underline($primary-wrapper-color, $underline-color-light, $font-size-mega, #fff);
+  @include bp('sm') { 
+    &:before {
+      top: 46%;
+    }
+  }
 }
 
 .dark-underline-title {
   @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
+  @include bp('sm') { 
+    &:before {
+      top: 46%;
+    }
+  }
 }
 
 .dark-underline-title--double {
@@ -109,6 +119,36 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
     transform: translateY($gutter);
     display: inline-block;
     margin-bottom: $gutter;
+  }
+}
+
+.dark-underline-title--logo-double {
+  @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
+  margin-bottom: 0;
+
+  svg:first-child {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: block;
+  }
+  svg:last-child {
+    display: none;
+  }
+  span:first-child {
+    transform: translateY($gutter);
+    font-size: $font-size-intermediate;
+  }
+  span:last-child {
+    text-transform: inherit;
+    font-weight: bold;
+    transform: translateY(-$gutter);
+    display: inline-block;
+    margin-bottom: 0;
+  }
+  @include bp('sm') { 
+    &:before {
+      top: 50%;
+    }
   }
 }
 
