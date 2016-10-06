@@ -247,6 +247,84 @@
 	}
 }
 
+.statistics {
+	background: white;
+	margin-top: -12rem;
+
+	.statistics__title {
+		font-size: $font-size-mega;
+		line-height: 1.2;
+		text-align: center;
+		color: $gray-darkest;
+
+		svg {
+			width: 100%;
+			height: 7rem;
+		}
+
+		@include bp('xs') {
+			font-size: $font-size-giga;
+
+			svg {
+				width: 40rem;
+				height: 7rem;
+			}
+		}
+
+		svg {
+			max-width: 100%;
+			max-height: 7rem;
+		}
+	}
+	.statistics__number {
+		text-align: center;
+		//margin: $gutter-quarter;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: $gutter 0;
+
+		@include bp('xs') {
+			//margin: $gutter-half;
+		}
+
+		svg { 
+			width: 5rem;
+			height: 5rem;
+			fill: $color-primary;
+
+			@include bp('xs') {
+				width: 10rem;
+    			height: 10rem;
+			}
+		}
+		strong {
+			font-size: $font-size-large;
+			color: $gray-darkest;
+			display: block;
+	
+			@include bp('xs') {
+				font-size: $font-size-mega * 2;
+			}
+		}
+		span {
+			font-size: $font-size-medium;
+			color: $gray-darkest;
+			display: block;
+
+			@include bp('xs') {
+				font-size: $font-size-large;
+			}
+		}
+		&:hover {
+			transition: all .2s ease;
+			background: $color-primary;
+
+			strong, span { color: white; }
+			svg { fill: white; }
+		}
+	}
+}
+
 .discovery {
 	margin-bottom: -11rem;
 

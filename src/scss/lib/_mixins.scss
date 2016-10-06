@@ -67,7 +67,7 @@
 		position: relative;
 		display: inline-block;
 		background: $titleBackground;
-		font-size: $fontSize;
+		font-size: $fontSize !important;
 		font-weight: normal;
 		color: $fontColor;
 		text-transform: uppercase;
