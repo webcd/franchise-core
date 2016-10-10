@@ -116,9 +116,9 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
   span:last-child {
     text-transform: inherit;
     font-weight: normal;
-    transform: translateY($gutter);
+    transform: translateY(0);
     display: inline-block;
-    margin-bottom: $gutter;
+    margin-bottom: $gutter-half;
   }
 }
 
