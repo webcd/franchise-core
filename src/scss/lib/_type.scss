@@ -110,8 +110,14 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
 .dark-underline-title--double {
   @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
 
+  @include bp('sm') { 
+    &:before {
+        top: 45%;
+    }
+  }
   span:first-child {
     transform: translateY($gutter);
+    margin-bottom: $gutter-half;
   }
   span:last-child {
     text-transform: inherit;
