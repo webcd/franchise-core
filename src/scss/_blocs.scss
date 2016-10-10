@@ -429,9 +429,13 @@
 
 		svg {
 			margin-right: $gutter-half;
+			flex: 0 0 3.2rem;
 		}
 		a {
 			margin-top: $gutter-quarter;
+			text-decoration: none;
+			color: black;
+			flex: 1 0 calc(100% - 3.2rem);
 
 			&:hover {
 				text-decoration: none;
@@ -774,13 +778,13 @@
 				color: $color-primary;
 				text-decoration: none;
 				font-size: $font-size-large;
-				padding: 0 0.9rem;
+				padding: 0 0.8rem;
 				margin: $gutter-quarter 0;
 
 				border-left: 0.1rem solid transparent;
 				border-right: 0.1rem solid $color-primary;
 			}
-			&:last-child a { border-right: none; }
+			&:last-child a, &:last-child span { border-right: none; }
 			&:hover { 
 				background: $color-primary; 
 				a, span { color: white; }
