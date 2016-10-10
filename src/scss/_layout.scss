@@ -46,40 +46,6 @@ body {
 
 
 /* ------------------------------------------------------------------------------------------------
-											Home
------------------------------------------------------------------------------------------------- */
-
-
-.wrapper--presentation {
-	background: $primary-wrapper-color;
-	padding-top: 11rem;
-
-	.map-pointer {
-		margin-top: $gutter;
-		width: 100%;
-    	height: 40rem;
-    	fill: #7a9bb1;
-	}
-	.light-underline-title {
-		margin-bottom: $gutter-half;
-
-		@include bp('xs', true){
-			border: none;
-		}
-	}
-	.presentation-title {
-		line-height: 1.1;
-		color: #fff;
-		text-transform: uppercase;
-		font-weight: bold;
-	}
-	p {
-		line-height: 1.2;
-	}
-}
-
-
-/* ------------------------------------------------------------------------------------------------
 									items content blocs 
 ------------------------------------------------------------------------------------------------ */
 

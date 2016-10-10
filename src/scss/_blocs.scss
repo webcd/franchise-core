@@ -35,7 +35,7 @@
 			flex: 1 0 85%;
 		}
 		@include bp(lg){
-			flex: 1 0 59%;
+			flex: 1 0 57%;
 		}
 
 		a {
@@ -513,6 +513,11 @@
 			border: 0.1rem solid $color-primary;
 			border-left: 0.4rem solid $color-secondary;
 		}
+		&.city--franchise {
+			a {
+				text-transform: initial;
+			}
+		}
 	}	
 }
 
@@ -941,6 +946,10 @@
 
 			a {
 				text-decoration: none;
+				color: $gray-light;
+			}
+			span:last-child {
+				text-transform: uppercase;
 				color: $gray-light;
 			}
 		}
