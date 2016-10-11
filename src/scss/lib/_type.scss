@@ -149,13 +149,13 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
   span:last-child {
     text-transform: inherit;
     font-weight: bold;
-    transform: translateY(-$gutter);
+    transform: translateY(-$gutter-quarter);
     display: inline-block;
     margin-bottom: 0;
   }
   @include bp('sm') { 
     &:before {
-      top: 50%;
+      top: 58%;
     }
   }
 }
