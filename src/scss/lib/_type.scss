@@ -111,7 +111,8 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
   @include underline($ternary-wrapper-color, $underline-color-dark, $font-size-mega, #000);
 
   &:before {
-    margin: $gutter 0 $gutter-quarter 0;
+    //margin: $gutter 0 $gutter-quarter 0;
+    margin: 0;
 
     @include bp('sm') { 
       top: 45%;

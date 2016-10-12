@@ -402,6 +402,7 @@
 	}
 	ul {
 		padding: 0;
+		margin-bottom: $gutter-quarter;
 
 		> li {
 			padding: $gutter-quarter 0;
@@ -421,19 +422,19 @@
 			}
 			p {
 				margin: 0;
-				line-height: 1;
+				line-height: 1.2;
 			}
 		}
 	}
 	.link {
-		color: $gray;
+		color: $gray-light;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-size: $font-size-small;
 		font-weight: bold;
 
 		&:hover {
-			color: $gray-light;
+			color: $gray;
 			text-decoration: none;
 		}
 	}
@@ -553,14 +554,14 @@
 	    a {
 	      display: block;
 	      
-	      span {
+	      p {
 	        color: black;
 	      }
 	      &:hover {
 	        color: $color-primary;
 	        text-decoration: none;
 
-	        span {
+	        p {
 	          color: $color-primary;
 	        }
 	      }
@@ -582,14 +583,14 @@
 	    a {
 	      display: block;
 
-	      span {
+	      p {
 	        color: black;
 	      }
 	      &:hover {
 	        color: $color-primary;
 	        text-decoration: none;
 
-	        span {
+	        p {
 	          color: black;
 	        }
 	      }
