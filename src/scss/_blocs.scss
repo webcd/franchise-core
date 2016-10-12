@@ -396,6 +396,7 @@
 		letter-spacing: -0.5px;
 		text-transform: uppercase;
 		font-weight: normal;
+		line-height: 1.2;
 		padding-bottom: $gutter-quarter;
 		border-bottom: 0.5rem solid $neutral-color-light;
 	}
@@ -425,12 +426,14 @@
 		}
 	}
 	.link {
-		color: $gray-darkest;
+		color: $gray;
 		text-decoration: none;
 		text-transform: uppercase;
+		font-size: $font-size-small;
+		font-weight: bold;
 
 		&:hover {
-			color: $gray;
+			color: $gray-light;
 			text-decoration: none;
 		}
 	}
@@ -542,53 +545,57 @@
 }
 
 .rent-sale {
-  li {
-    margin: 0;
-    padding: $gutter-half 0;
+	ul {
+	  > li {
+	    margin: 0;
+	    padding: $gutter-half 0;
 
-    a {
-      display: block;
-      
-      span {
-        color: black;
-      }
-      &:hover {
-        color: $color-primary;
-        text-decoration: none;
+	    a {
+	      display: block;
+	      
+	      span {
+	        color: black;
+	      }
+	      &:hover {
+	        color: $color-primary;
+	        text-decoration: none;
 
-        span {
-          color: $color-primary;
-        }
-      }
-    }
-  }
+	        span {
+	          color: $color-primary;
+	        }
+	      }
+	    }
+	  }
+	}
 }
 
 .resume-activity {
-  li {
-    margin: 0;
-    padding: $gutter-half 0;
+	ul {
+	  > li {
+	    margin: 0;
+	    padding: $gutter-half 0;
 
-    &:not(:last-child) {
-        border: none;
-      }
+	    &:not(:last-child) {
+	        border: none;
+	      }
 
-    a {
-      display: block;
+	    a {
+	      display: block;
 
-      span {
-        color: black;
-      }
-      &:hover {
-        color: $color-primary;
-        text-decoration: none;
+	      span {
+	        color: black;
+	      }
+	      &:hover {
+	        color: $color-primary;
+	        text-decoration: none;
 
-        span {
-          color: $color-primary;
-        }
-      }
-    }
-  }
+	        span {
+	          color: black;
+	        }
+	      }
+	    }
+	  }
+	}
 }
 
 /* ------------------------------------------------------------------------------------------------
