@@ -143,11 +143,11 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
   svg:last-child {
     display: none;
   }
-  span:first-child {
+  span:first-of-type {
     transform: translateY($gutter);
     font-size: $font-size-intermediate !important;
   }
-  span:last-child {
+  span:last-of-type {
     text-transform: inherit;
     font-weight: bold;
     transform: translateY(-$gutter-quarter);
