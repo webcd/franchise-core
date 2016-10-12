@@ -145,7 +145,7 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
   }
   span:first-child {
     transform: translateY($gutter);
-    font-size: $font-size-intermediate;
+    font-size: $font-size-intermediate !important;
   }
   span:last-child {
     text-transform: inherit;

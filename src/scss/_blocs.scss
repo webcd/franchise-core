@@ -485,8 +485,13 @@
 
 			img {
 				margin-right: $gutter-half;
-				width: 8rem;
-				height: 8rem;
+				width: 5rem;
+				height: 5rem;
+
+				@include bp('lg'){
+					width: 8rem;
+					height: 8rem;
+				}
 			}
 		}
 	}	
