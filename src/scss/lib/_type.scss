@@ -118,11 +118,11 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
       top: 45%;
     }
   }
-  span:first-child {
+  span:first-of-type {
     transform: translateY($gutter);
     margin-bottom: $gutter-half;
   }
-  span:last-child {
+  span:last-of-type {
     text-transform: inherit;
     font-weight: normal;
     transform: translateY($gutter-half);
@@ -144,7 +144,7 @@ h6, .h6 { font-size: $font-size-h6; font-weight: $font-weight-h6; color: $color-
     display: none;
   }
   span:first-of-type {
-    transform: translateY($gutter);
+    transform: translateY(0);
     font-size: $font-size-intermediate !important;
   }
   span:last-of-type {
