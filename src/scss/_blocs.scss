@@ -426,10 +426,12 @@
 	}
 	.link {
 		color: $gray-darkest;
-		text-decoration: uppercase;
+		text-decoration: none;
+		text-transform: uppercase;
 
 		&:hover {
 			color: $gray;
+			text-decoration: none;
 		}
 	}
 }
@@ -541,7 +543,8 @@
 
 .rent-sale {
   li {
-    margin: $gutter-half 0;
+    margin: 0;
+    padding: $gutter-half 0;
 
     a {
       display: block;
@@ -551,6 +554,7 @@
       }
       &:hover {
         color: $color-primary;
+        text-decoration: none;
 
         span {
           color: $color-primary;
@@ -562,7 +566,8 @@
 
 .resume-activity {
   li {
-    margin: $gutter-half 0;
+    margin: 0;
+    padding: $gutter-half 0;
 
     &:not(:last-child) {
         border: none;
@@ -576,6 +581,7 @@
       }
       &:hover {
         color: $color-primary;
+        text-decoration: none;
 
         span {
           color: $color-primary;
