@@ -390,7 +390,8 @@
 .aside-list {
 	margin: $gutter-double 0;
 
-	h2 {
+	h2, .aside-list__title {
+		display: block;
 		font-size: $font-size-base;
 		letter-spacing: -0.5px;
 		text-transform: uppercase;
@@ -417,6 +418,18 @@
 			span {
 				color: $color-primary;
 			}
+			p {
+				margin: 0;
+				line-height: 1;
+			}
+		}
+	}
+	.link {
+		color: $gray-darkest;
+		text-decoration: uppercase;
+
+		&:hover {
+			color: $gray;
 		}
 	}
 }
@@ -526,6 +539,51 @@
 	}	
 }
 
+.rent-sale {
+  li {
+    margin: $gutter-half 0;
+
+    a {
+      display: block;
+      
+      span {
+        color: black;
+      }
+      &:hover {
+        color: $color-primary;
+
+        span {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
+
+.resume-activity {
+  li {
+    margin: $gutter-half 0;
+
+    &:not(:last-child) {
+        border: none;
+      }
+
+    a {
+      display: block;
+
+      span {
+        color: black;
+      }
+      &:hover {
+        color: $color-primary;
+
+        span {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
 
 /* ------------------------------------------------------------------------------------------------
 									Generic content blocs 
