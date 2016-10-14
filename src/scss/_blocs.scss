@@ -978,10 +978,12 @@
 
 			a {
 				display: block;
-				border: 0.2rem solid transparent;
+				img {
+					border: 0.2rem solid transparent;
 
-				&:hover {
-					border: 0.2rem solid $color-primary;
+					&:hover {
+						border: 0.2rem solid $color-primary;
+					}
 				}
 			}
 		}
