@@ -17,7 +17,7 @@
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	
+
 	.franchise-showcase__img {
 		flex: 1 0 100%;
 		text-align: center;
@@ -30,7 +30,7 @@
 	.franchise-showcase__content {
 		flex: 1 0 100%;
 		padding: 0 $gutter;
-		
+
 		@include bp(xs){
 			flex: 1 0 85%;
 		}
@@ -88,7 +88,7 @@
 	flex-wrap: wrap;
 	padding: $gutter-half;
 	border: 0.3rem solid transparent;
-	
+
 	&:hover {
 		border: 0.3rem solid $color-secondary;
 		transition: border .2s $ease-classic;
@@ -109,7 +109,7 @@
 	.franchise-item__content {
 		flex: 1 0 100%;
 		padding: 0 $gutter-half;
-		
+
 		@include bp(xs){
 			flex: 1 0 85%;
 		}
@@ -138,7 +138,7 @@
 	.franchise-item__stats {
 		flex: 1 0 100%;
 		padding: 0 $gutter-quarter 0 $gutter-half;
-		
+
 		@include bp(lg){
 			border-left: 0.1rem solid $neutral-color-light;
 			flex: 1 0 17%;
@@ -202,7 +202,7 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-											Franchise detail 
+											Franchise detail
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -256,7 +256,7 @@
 	text-align: center;
 	min-height: 22rem;
 	background-size: cover;
-	
+
 	@include bp(sm){
 		text-align: left;
 	}
@@ -287,7 +287,7 @@
 
 .franchise__cta {
 	margin: $gutter 0;
-	
+
 	.btn {
 		margin: $gutter-quarter 0;
 
@@ -373,7 +373,7 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-										Aside content 
+										Aside content
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -467,7 +467,7 @@
 .top-franchises {
 	li {
 		margin: 0;
-	
+
 		a {
 			display: flex;
 			justify-content: flex-start;
@@ -494,7 +494,7 @@
 				}
 			}
 		}
-	}	
+	}
 }
 
 .top-cities {
@@ -547,7 +547,7 @@
 				text-transform: initial;
 			}
 		}
-	}	
+	}
 }
 
 .rent-sale {
@@ -558,7 +558,7 @@
 
 	    a {
 	      display: block;
-	      
+
 	      p {
 	        color: black;
 	      }
@@ -605,7 +605,7 @@
 }
 
 /* ------------------------------------------------------------------------------------------------
-									Generic content blocs 
+									Generic content blocs
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -753,9 +753,9 @@
 	flex-wrap: nowrap;
 	border: 0.3rem solid transparent;
 	@include transition(all .2s $ease-classic);
-	
+
 	&:hover {
-		border: 0.3rem solid $color-ternary; 
+		border: 0.3rem solid $color-ternary;
 	}
 	&:nth-child(odd) {
 		background: $underline-color-dark;
@@ -849,7 +849,7 @@
 			@include bp(lg){
 				flex: 1 1 auto;
 			}
-			
+
 			a, span {
 				display: block;
 				color: $color-primary;
@@ -862,8 +862,8 @@
 				border-right: 0.1rem solid $color-primary;
 			}
 			&:last-child a, &:last-child span { border-right: none; }
-			&:hover { 
-				background: $color-primary; 
+			&:hover {
+				background: $color-primary;
 				a, span { color: white; }
 			}
 			&.desactivate {
@@ -871,7 +871,7 @@
 					color: lighten($color-primary, 30%);
 				}
 			}
-		}	
+		}
 	}
 }
 
@@ -933,7 +933,7 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-										Pagination 
+										Pagination
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -947,7 +947,7 @@
 		color: $color-primary;
 		display: inline-block;
 		font-size: $font-size-small;
-		
+
 		&.active, &:hover {
 			background: $color-ternary;
 		}
@@ -963,7 +963,7 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-											Slider 
+											Slider
 ------------------------------------------------------------------------------------------------ */
 
 .wrapper--slider {
@@ -971,7 +971,7 @@
 
 	.multi-items-slider {
 		padding: 0 $gutter-quad;
-		
+
 		article {
 			margin: $gutter-quarter;
 			text-align: center;
@@ -1013,7 +1013,7 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-										 Breadcrumb 
+										 Breadcrumb
 ------------------------------------------------------------------------------------------------ */
 
 .wrapper--breadcrumb {
@@ -1051,82 +1051,191 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-											Header 
+											Header
 ------------------------------------------------------------------------------------------------ */
 
+// VARS
+
+// 90px ad + 7px iframe margin + 2x $gutter-half
+$pre-header-height: 9rem + 0.7rem + $gutter;
+
+// Starting from this breakpoint, we show the ad banner
+$bp-ad-banner: 'sm';
+
+
+// SITE CONTENT
+
+.site-content {
+  // Push content down when we show the ad banner
+  @include bp($bp-ad-banner) {
+    margin-top: $pre-header-height;
+  }
+}
+
+// SITE HEADER
 
 .site-header {
-	position: fixed;
+  // Sticky header
+  position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 1100;
-
-	svg symbol {
-		fill: pink;
-	}
-
-	.wrapper--pre-header {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		background: white;
-		text-align: center;
-	}
-	.wrapper--post-header {
-		transition: background 0.3s $ease-classic;
-		padding: $gutter-quarter;
-
-		.top-menu {
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			
-			.menu-container {
-				flex: 0 0 35%;
-				z-index: 1000;
-
-				.menu-icon {
-					display: inline-block;
-					text-decoration: none;
-					display: flex;
-					align-items: center;
-
-					span { 
-						padding-left: $gutter-half;
-						color: black;
-					}
-				}
-			}
-			
-			.logo {
-				flex: 0 0 30%;
-				z-index: 1001;
-				text-align: center;
-
-				img {
-					max-width: 20rem;
-				}
-			}
-			.cart {
-				flex: 0 0 35%;
-				display: flex;
-				justify-content: flex-end;
-			}
-		}
-	}
+  z-index: 1000;
 }
 
-.light-bg {
-	background: white !important;
-	transition: background 0.3s $ease-classic;
+// HEADER WRAPPERS
+
+// Pre-header (ad banner)
+.wrapper--pre-header {
+  padding-top: $gutter-half;
+  padding-bottom: $gutter-half;
+  background: white;
+  text-align: center;
+
+  min-height: $pre-header-height; // Prevents FOUC
+  display: none; // Hidden on mobile
+
+  // Show ad banner when enough room
+  @include bp($bp-ad-banner) { display: block; }
+
+  // Bump the banner's iframe z-index
+  > iframe { z-index: 2000; }
 }
 
+// Header (aka 'expanded' menu)
+.wrapper--header {}
+
+// Post-header (aka navbar menu)
+.wrapper--post-header {
+  position: relative; // for logo centering
+  padding-top: $gutter-quarter;
+  padding-bottom: $gutter-quarter;
+  height: $gutter-double + 2 * $gutter-quarter; // fixed, computed height
+  background-color: rgba(255,255,255,0);
+  @include shadow(0);
+  transition: all 0.5s;
+
+  /*body*/.menu--bg:not(.overlay--active) & {
+    background-color: rgba(255,255,255,1);
+    @include shadow(1);
+  }
+}
+
+// TOP MENU
+
+.top-menu {
+	display: flex;
+
+  .top-menu__hamburger {}
+
+  .top-menu__filler { flex: 1; }
+
+	.top-menu__logo {}
+
+  .top-menu__search {
+    display: none; // hidden on mobile
+    @include bp('md') { display: block; }
+    /*body*/.overlay--active & { display: none; }
+  }
+
+  .top-menu__cart {
+    /*body*/.overlay--active & { display: none; }
+  }
+
+  .top-menu__close {
+    display: none;
+    /*body*/.overlay--active & { display: block; }
+  }
+
+  .top-menu__overlay {}
+}
+
+// MAIN LOGO
+
+.logo-main {
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 1001;
+  @include shadow(1);
+}
+
+// MAIN SEARCH
+
+.search-main {
+  display: flex;
+
+  .search-form__input { flex: 1; }
+  .search-form__btn { flex: 0; }
+  .search-form__btn {
+    margin: 0 $gutter-quarter; // Adds air around
+  }
+}
+
+// MENU BUTTONS & ICONS
+
+.btn--menu {
+  display: inline-block;
+  height: $gutter-double; // equals 48px, for good touch area
+  line-height: $gutter-double;
+  min-width: $gutter-double;
+  background-color: transparent;
+  text-decoration: none;
+
+  > span,
+  > svg {
+    vertical-align: middle;
+    transition: all 0.5s;
+  }
+
+  > svg {
+    fill: white;
+
+    /*body*/.menu--bg:not(.overlay--active) & {
+      fill: black;
+    }
+  }
+
+  // Menu button with a text label
+  > span {
+    display: none; // Hidden on mobile
+    padding: 0 $gutter-half;
+
+    color: white;
+    /*body*/.menu--bg:not(.overlay--active) & {
+      color: black;
+    }
+
+    @include bp('xs') { display: inline-block; }
+  }
+}
+
+// Cart buttons + item counter
+
+.btn--cart {
+  position: relative;
+}
+
+.cart__counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: $gutter;
+  height: $gutter;
+  line-height: $gutter;
+  background-color: $color-secondary;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 50%;
+}
 
 
 /* ------------------------------------------------------------------------------------------------
-											Footer 
+											Footer
 ------------------------------------------------------------------------------------------------ */
 
 .site-footer {
