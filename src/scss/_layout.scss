@@ -267,3 +267,152 @@ body {
 		}
 	}
 }
+
+
+
+/* ------------------------------------------------------------------------------------------------
+global TLF form override
+------------------------------------------------------------------------------------------------ */
+
+
+.wrapper--demande-doc {
+
+  .franchise-line {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .franchise-line__bloc {
+      display: flex;
+      padding-right: $gutter-quarter;
+      flex: 0 0 100%;
+
+      @include bp('xs') { flex: 0 0 50%; }
+      @include bp('sm') { flex: 0 0 33%; }
+      @include bp('md') { flex: 0 0 20%; }
+      
+      .bloc__img {
+        flex: 0 0 6rem;
+
+        img {
+          border: 0.1rem solid $neutral-color-light;
+          max-width: 100%;
+        }
+      }
+      .bloc__descr {
+        flex: 0 0 calc(100% - 6rem);
+        padding: 0 0 0 $gutter-quarter;
+        line-height: 1.2;
+
+        a { 
+          text-decoration: none;
+          text-transform: uppercase;
+          color: $color-primary;
+          margin: 0;
+          font-size: $font-size-small;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .aside-list {
+    margin-top: $gutter;
+
+
+    
+    ul {
+      border-bottom: 0.1rem solid $neutral-color-light;
+      padding-bottom: $gutter-half;
+
+      li {
+        overflow: auto;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        svg {
+          fill: #00a362;
+          flex: 0 0 4rem;
+          margin-right: $gutter-quarter;
+        }
+        p {   
+          flex: 0 0 calc(100% - 5rem);
+        }
+      }
+    }
+  }
+
+  // specific override for centralised form
+  .demande-doc {
+    background: $color-ternary;
+    padding: $gutter-quarter $gutter;
+    margin-top: $gutter;
+
+    form {
+      padding: 0;
+
+      input[type="submit"] {
+        @extend .btn;
+        @extend .btn-primary;
+        @extend .btn-block;
+        @extend .btn-big;
+
+        width: 93%;
+      }
+      select {
+        @extend .select;
+        padding: 0 $gutter-half;
+
+        @include bp('md'){
+            width: 80% !important;
+        }
+      }
+      p {
+        color: $gray-light;
+        font-style: italic;
+      }
+    }
+  }
+}
+
+
+.wrapper--demande-doc-sent {
+  .list {
+    margin: $gutter-double auto $gutter auto;
+    padding-top: $gutter-double;
+    border-top: 0.1rem solid $neutral-color-light;
+    @include bp('md'){ width: 80%; }
+    @include bp('lg'){ width: 60%; }
+
+    .list-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      list-style-type: none;
+      line-height: 1.2;
+      margin-top: $gutter;
+
+      .list-item__logo {
+        flex: 0 0 7rem;
+        margin-right: $gutter;
+      }
+      .list-item__descrp {
+        flex: 0 0 calc(100% - 9rem);
+
+        .list-item__text--big {
+          color: $color-primary;
+          font-size: $font-size-mega;
+        }
+        .list-item__text--small {
+          font-size: $font-size-small;
+          color: $gray-light;
+        }
+        a {
+          color: $color-primary;
+        }
+      }
+    }
+  }
+}
