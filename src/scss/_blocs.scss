@@ -1238,47 +1238,4 @@ $bp-ad-banner: 'sm';
 }
 
 
-/* ------------------------------------------------------------------------------------------------
-											Footer
------------------------------------------------------------------------------------------------- */
 
-.site-footer {
-	background: $footer-color-bg;
-
-	.wrapper--pre-footer {
-		.footer-col {
-			.footer-title {
-				color: white;
-				font-size: $font-size-intermediate;
-				font-weight: bold;
-				text-transform: uppercase;
-			}
-			ul {
-				padding: 0;
-				margin: $gutter-half 0;
-
-				li {
-					list-style-type: none;
-
-					a {
-						color: white;
-						text-decoration: none;
-						font-size: $font-size-small;
-
-						&:hover {
-							text-decoration: underline;
-						}
-					}
-				}
-			}
-		}
-	}
-	.wrapper--post-footer {
-		background: white;
-		text-align: right;
-
-		img {
-			margin-right: $gutter-double;
-		}
-	}
-}
