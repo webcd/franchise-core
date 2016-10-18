@@ -4,6 +4,17 @@
 Common styles for all franchises projects : Point Franchise, Franchise Habitat and En Franchise  
 ------------------------------------------------------------------------------------------------ */
 
+select, .select {
+	appearance: none;
+	line-height: 1;
+	padding: $gutter-half ($gutter-double + $gutter-half) $gutter-half $gutter-half;
+	border: 0.1rem solid $neutral-color-light;
+	background-image: url("../img/cursor-select.svg"), url("../img/cursor-separator.svg");
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 1.5rem center, right 2.8rem center;
+	background-size: 1.2rem 1.2rem, 1.2rem 3rem;
+	outline: none;
+}
 
 
 
