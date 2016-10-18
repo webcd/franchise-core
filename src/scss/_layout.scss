@@ -416,3 +416,153 @@ global TLF form override
     }
   }
 }
+
+
+
+/* ------------------------------------------------------------------------------------------------
+Static pages : 404, partners
+------------------------------------------------------------------------------------------------ */
+
+
+
+.wrapper--404 {
+	.title {
+		font-size: $font-size-mega;
+		text-transform: uppercase;
+
+		.title__superbig {
+			font-size: 7.2rem;
+		}
+	}
+	.list-title {
+		display: block;
+		font-size: $font-size-intermediate;
+		text-transform: uppercase;
+		font-weight: normal;
+		line-height: 1.2;
+		padding-bottom: $gutter-quarter;
+		border-bottom: 0.5rem solid $neutral-color-light;
+		margin-top: $gutter-quad;
+	}
+	.bullet-list {
+		padding-bottom: $gutter;
+		border-bottom: 0.1rem solid $neutral-color-light;
+	}
+}
+
+
+.wrapper--parnters {
+	margin-top: 0;
+
+	.partner {
+		border-bottom: 0.1rem solid $neutral-color-light;
+		padding: $gutter-half 0;
+		margin: 0;
+
+		a {
+			text-decoration: none;
+			color: black;
+			font-weight: bold;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+	}
+}
+
+.wrapper--contact {
+	margin-bottom: $gutter;
+
+	.contact {
+		width: 100%;
+
+		@include bp('md'){
+			width: 90%;
+			margin: 0 auto;
+		}
+		@include bp('lg'){
+			width: 80%;
+			margin: 0 auto;
+		}
+		
+		.contact__header {
+			padding-top: $gutter;
+			border-bottom: 0.1rem solid $neutral-color-light;
+			
+			@include bp('md'){
+				background: url('../img/phone-pf.png') no-repeat right bottom;
+			}
+
+			.contact__title {
+				font-size: 3rem;
+				color: $color-primary;
+				text-transform: uppercase;
+				font-weight: normal;
+			}
+			p {
+				margin-top: 0;
+				font-size: $font-size-large;
+			}
+		}
+		.contact__subtitle {
+			text-transform: uppercase;
+			font-size: $font-size-medium;
+
+			@include bp('sm'){
+				font-size: $font-size-intermediate;
+			}
+		}
+		.contact__form {
+			display: flex;
+			flex-wrap: wrap;
+
+			.contact__column {
+				display: flex;
+				flex-direction: column;
+				flex: 1 0 100%;
+				
+				@include bp('sm'){
+					flex: 1 0 50%;
+
+					&.contact__column--1 {
+						padding: 0 $gutter-half 0 0;
+					}
+					&.contact__column--2 {
+						padding: 0 0 0 $gutter-half;
+					}
+				}
+
+			}
+			.bloc-form {
+				margin-top: $gutter-half;
+
+				input[type="text"], select, textarea {
+					padding: $gutter-quarter + 0.4rem; // sorry for that...
+					font-size: $font-size-base;
+					border: 0.1rem solid $neutral-color-light;
+				}
+				textarea {
+					min-height: 21rem;
+				}
+				button {
+					font-size: $font-size-large;
+				}
+			}
+			.bloc-form--pushed {
+				margin-top: auto;
+			}
+		}
+	}
+}
+
+.error {
+	label {
+		color: #FF5F60;
+	}
+	input[type="text"].error {
+	    background: url(../img/cross.svg);
+	    background-repeat: no-repeat;
+	    background-position: right top;
+	}
+}
