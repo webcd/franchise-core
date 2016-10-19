@@ -22,6 +22,9 @@ body {
 }
 
 .static-content {
+	> * {
+		font-size: $font-size-base !important; /* override fck editor content */
+	}
 	a {
 		color: $color-primary;
 		text-decoration: none;
