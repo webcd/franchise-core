@@ -400,6 +400,10 @@ global TLF form override
       .list-item__logo {
         flex: 0 0 7rem;
         margin-right: $gutter;
+
+        svg {
+        	fill: $color-primary;
+        }
       }
       .list-item__descrp {
         flex: 0 0 calc(100% - 9rem);

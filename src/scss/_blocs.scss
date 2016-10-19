@@ -917,6 +917,32 @@
 	}
 }
 
+.search-select {
+	select {
+		display: block;
+		margin: $gutter-quarter 0;
+		font-size: $font-size-small;
+
+		@include bp('xs'){
+			display: inline-block;
+			width: auto;
+		}
+		option {
+			padding: $gutter-half 0;
+		}
+	}
+	span {
+		padding-right: $gutter-half;
+	}
+	.return {
+		display: block;
+
+		@include bp(lg){
+			display: none;
+		}
+	}
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 										 articles / news list
@@ -1060,7 +1086,7 @@
 
 // VARS
 
-// 90px ad + 72px full bg img + 7px iframe margin + 2x $gutter-half
+// 90px ad + 7px iframe margin + 2x $gutter-half
 $pre-header-height: 9rem + 0.7rem + $gutter;
 $header-img-height: 7.2rem;
 
