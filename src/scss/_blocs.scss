@@ -1060,8 +1060,9 @@
 
 // VARS
 
-// 90px ad + 7px iframe margin + 2x $gutter-half
+// 90px ad + 72px full bg img + 7px iframe margin + 2x $gutter-half
 $pre-header-height: 9rem + 0.7rem + $gutter;
+$header-img-height: 7.2rem;
 
 // Starting from this breakpoint, we show the ad banner
 $bp-ad-banner: 'sm';
@@ -1072,7 +1073,7 @@ $bp-ad-banner: 'sm';
 .site-content {
   // Push content down when we show the ad banner
   @include bp($bp-ad-banner) {
-    margin-top: $pre-header-height;
+    margin-top: $pre-header-height + $header-img-height;
   }
 }
 
