@@ -541,26 +541,27 @@ Static pages : 404, partners
 				}
 
 			}
-			.bloc-form {
-				margin-top: $gutter-half;
-
-				input[type="text"], select, textarea {
-					padding: $gutter-quarter + 0.4rem; // sorry for that...
-					font-size: $font-size-base;
-					border: 0.1rem solid $neutral-color-light;
-				}
-				textarea {
-					min-height: 21rem;
-				}
-				button {
-					font-size: $font-size-large;
-				}
-			}
-			.bloc-form--pushed {
-				margin-top: auto;
-			}
 		}
 	}
+}
+
+.bloc-form {
+	margin-top: $gutter-half;
+
+	input[type="text"], select, textarea {
+		padding: $gutter-quarter + 0.4rem; // sorry for that...
+		font-size: $font-size-base;
+		border: 0.1rem solid $neutral-color-light;
+	}
+	textarea {
+		min-height: 21rem;
+	}
+	button {
+		font-size: $font-size-large;
+	}
+}
+.bloc-form--pushed {
+	margin-top: auto;
 }
 
 .error {
