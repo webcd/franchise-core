@@ -1090,6 +1090,9 @@
 $pre-header-height: 9rem + 0.7rem + $gutter;
 $header-img-height: 7.2rem;
 
+// 48px (btn's height) + 2x $gutter-quarter
+$navbar-height: $gutter-double + $gutter-half;
+
 // Starting from this breakpoint, we show the ad banner
 $bp-ad-banner: 'sm';
 
@@ -1099,7 +1102,15 @@ $bp-ad-banner: 'sm';
 .site-content {
   // Push content down when we show the ad banner
   @include bp($bp-ad-banner) {
+<<<<<<< HEAD
     margin-top: $pre-header-height + $header-img-height;
+=======
+    margin-top: $pre-header-height + $navbar-height;
+
+    /*body*/.is-home & {
+      margin-top: $pre-header-height;
+    }
+>>>>>>> e8f2c1a... Improved blocks
   }
 }
 
@@ -1142,9 +1153,14 @@ $bp-ad-banner: 'sm';
   padding-top: $gutter-quarter;
   padding-bottom: $gutter-quarter;
   height: $gutter-double + 2 * $gutter-quarter; // fixed, computed height
-  background-color: rgba(255,255,255,0);
-  @include shadow(0);
+  background-color: rgba(255,255,255,1);
+  @include shadow(1);
   transition: all 0.5s;
+
+  /*body*/.is-home & {
+    background-color: rgba(255,255,255,0);
+    @include shadow(0);
+  }
 
   /*body*/.menu--bg:not(.overlay--active) & {
     background-color: rgba(255,255,255,1);
@@ -1223,7 +1239,11 @@ $bp-ad-banner: 'sm';
   }
 
   > svg {
-    fill: white;
+    fill: black;
+
+    /*body*/.is-home & {
+      fill: white;
+    }
 
     /*body*/.menu--bg:not(.overlay--active) & {
       fill: black;
@@ -1235,7 +1255,12 @@ $bp-ad-banner: 'sm';
     display: none; // Hidden on mobile
     padding: 0 $gutter-half;
 
-    color: white;
+    color: black;
+
+    /*body*/.is-home & {
+      color: white;
+    }
+
     /*body*/.menu--bg:not(.overlay--active) & {
       color: black;
     }
@@ -1252,8 +1277,8 @@ $bp-ad-banner: 'sm';
 
 .cart__counter {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: $gutter-quarter;
+  left: $gutter-half * 2.5;
   width: $gutter;
   height: $gutter;
   line-height: $gutter;
@@ -1264,5 +1289,6 @@ $bp-ad-banner: 'sm';
   border-radius: 50%;
 }
 
-
-
+.cart__counter--hidden {
+  display: none;
+}
