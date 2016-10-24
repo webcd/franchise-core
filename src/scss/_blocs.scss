@@ -1102,15 +1102,11 @@ $bp-ad-banner: 'sm';
 .site-content {
   // Push content down when we show the ad banner
   @include bp($bp-ad-banner) {
-<<<<<<< HEAD
-    margin-top: $pre-header-height + $header-img-height;
-=======
     margin-top: $pre-header-height + $navbar-height;
 
     /*body*/.is-home & {
       margin-top: $pre-header-height;
     }
->>>>>>> e8f2c1a... Improved blocks
   }
 }
 
