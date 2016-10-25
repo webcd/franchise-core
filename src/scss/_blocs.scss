@@ -1212,9 +1212,10 @@ $bp-ad-banner: 'sm';
   display: flex;
 
   .search-form__input { flex: 1; }
-  .search-form__btn { flex: 0; }
-  .search-form__btn {
-    margin: 0 $gutter-quarter; // Adds air around
+  .search-form__btn { 
+  	flex: 0; 
+	background: $color-primary;
+	margin: 0 $gutter-quarter 0 0; // Adds air around	
   }
 }
 
