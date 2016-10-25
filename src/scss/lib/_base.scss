@@ -14,6 +14,10 @@ img { max-width: 100%; }
 .align-center { text-align: center; }
 .align-right { text-align: right; }
 
+.align-center-xs {
+	@include bp('xs', true){ text-align: center; }
+}
+
 .full-w-min {
 	@include bp('xs', true){ width: 100%; }
 }

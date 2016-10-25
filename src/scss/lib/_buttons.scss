@@ -183,7 +183,7 @@
   @include button-simple($color-primary, white, white, $color-primary);
 }
 .btn-neutral {
-   @include button-simple(black, black, $color-neutral, $color-neutral);
+   @include button-simple(black, black, $color-neutral, lighten($color-neutral,3%));
 }
 
 
