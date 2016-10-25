@@ -1243,7 +1243,7 @@ $bp-ad-banner: 'sm';
     }
 
     /*body*/.menu--bg:not(.overlay--active) & {
-      fill: black;
+      fill: white;
     }
   }
 
@@ -1259,7 +1259,7 @@ $bp-ad-banner: 'sm';
     }
 
     /*body*/.menu--bg:not(.overlay--active) & {
-      color: black;
+      color: white;
     }
 
     @include bp('xs') { display: inline-block; }
