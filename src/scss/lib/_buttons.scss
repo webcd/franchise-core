@@ -182,6 +182,9 @@
 .btn-primary-border {
   @include button-simple($color-primary, white, white, $color-primary);
 }
+.btn-neutral {
+   @include button-simple(black, black, $color-neutral, $color-neutral);
+}
 
 
 // BUTTON SIZES

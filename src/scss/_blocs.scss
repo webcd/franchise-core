@@ -324,6 +324,7 @@
 			svg {
 				flex: 1 0 4rem;
 				margin-right: 1rem;
+				fill: $color-primary;
 
 				@include bp(xs){
 					flex: 1 0 100%;
@@ -437,6 +438,9 @@
 			color: $gray;
 			text-decoration: none;
 		}
+	}
+	svg {
+		fill: $color-primary;
 	}
 }
 
@@ -1243,7 +1247,7 @@ $bp-ad-banner: 'sm';
     }
 
     /*body*/.menu--bg:not(.overlay--active) & {
-      fill: white;
+      fill: black;
     }
   }
 
@@ -1259,7 +1263,7 @@ $bp-ad-banner: 'sm';
     }
 
     /*body*/.menu--bg:not(.overlay--active) & {
-      color: white;
+      color: black;
     }
 
     @include bp('xs') { display: inline-block; }
