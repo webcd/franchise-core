@@ -1166,6 +1166,10 @@ $bp-ad-banner: 'sm';
     background-color: rgba(255,255,255,1);
     @include shadow(1);
   }
+  /*body*/.menu--bg.overlay--active & {
+    background-color: rgba(255,255,255,0);
+    @include shadow(0);
+  }
 }
 
 // TOP MENU
@@ -1249,6 +1253,10 @@ $bp-ad-banner: 'sm';
     /*body*/.menu--bg:not(.overlay--active) & {
       fill: black;
     }
+
+    /*body*/.menu--bg.overlay--active & {
+      fill: white;
+    }
   }
 
   // Menu button with a text label
@@ -1266,8 +1274,20 @@ $bp-ad-banner: 'sm';
       color: black;
     }
 
+    /*body*/.menu--bg.overlay--active & {
+      color: white;
+    }
+
     @include bp('xs') { display: inline-block; }
   }
+}
+
+.btn--hamburger {
+	&:hover {
+		svg {
+			fill: $color-secondary;
+		}
+	}
 }
 
 // Cart buttons + item counter
