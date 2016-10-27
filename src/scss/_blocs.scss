@@ -1299,12 +1299,13 @@ $bp-ad-banner: 'sm';
 .cart__counter {
   position: absolute;
   top: $gutter-quarter;
-  left: $gutter-half * 2.5;
-  width: $gutter;
-  height: $gutter;
-  line-height: $gutter;
+  left: 3.3rem;
+  min-width: $gutter-half + $gutter-quarter;
+  height: $gutter-half + $gutter-quarter;
+  line-height: $gutter-half + $gutter-quarter;
   background-color: $color-secondary;
   color: white;
+  font-size: $font-size-small;
   font-weight: bold;
   text-align: center;
   border-radius: 50%;
