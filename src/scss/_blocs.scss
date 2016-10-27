@@ -1430,10 +1430,24 @@ body {
 .cart-item__delete {
   flex: 0 0 $gutter-double;
 
-  > .btn {
+  > button {
     width: $gutter-double;
     height: $gutter-double;
     text-align: center;
     line-height: $gutter-double;
+	border: none;
+    background: transparent;
+
+	&:hover {
+		svg {
+			transform: rotate(90deg);
+		}
+	}
+    svg {
+    	transform-origin: center center;
+    	transform: rotate(0deg);
+    	fill: $gray;
+    	transition: all 0.2s ease;
+    }
   }
 }
