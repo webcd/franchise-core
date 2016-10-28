@@ -350,7 +350,7 @@ global TLF form override
   // specific override for centralised form
   .demande-doc {
     background: $color-ternary;
-    padding: $gutter-quarter $gutter;
+    padding: $gutter-quarter 2.25 * $gutter $gutter-quarter $gutter;
     margin-top: $gutter;
 
     form {
