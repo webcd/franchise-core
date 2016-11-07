@@ -1308,7 +1308,8 @@ $bp-ad-banner: 'sm';
   font-size: $font-size-small;
   font-weight: bold;
   text-align: center;
-  border-radius: 50%;
+  border-radius: ($gutter-half + $gutter-quarter) / 2;
+  padding: 0 $gutter-eighth;
 }
 
 .cart__counter--hidden {
