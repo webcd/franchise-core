@@ -870,7 +870,7 @@
 				border-right: 0.1rem solid $color-primary;
 			}
 			&:last-child a, &:last-child span { border-right: none; }
-			&:hover {
+			&:hover, &.activate {
 				background: $color-primary;
 				a, span { color: white; }
 			}
