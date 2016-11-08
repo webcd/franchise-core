@@ -47,6 +47,16 @@ body {
 	}
 }
 
+.loader {
+	display: inline-block;
+
+	img {
+	  width: 3.6rem;
+	  height: 3.6rem;
+	  transform: translateY(1.2rem);
+	}
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 									items content blocs 
@@ -554,7 +564,7 @@ Static pages : 404, partners
 		border: 0.1rem solid $neutral-color-light;
 	}
 	textarea {
-		min-height: 21rem;
+		min-height: 26.8rem;
 	}
 	button {
 		font-size: $font-size-large;
