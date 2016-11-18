@@ -3,7 +3,7 @@
 
 
 /* ------------------------------------------------------------------------------------------------
-									Generic content blocs 
+									Generic content blocs
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -15,9 +15,9 @@ body {
 	//position: relative;
 	background: white;
 
-  	@include bp('lg') { 
-  		max-width: $site-wrapper-max-width; 
-  		margin: 0 auto; 
+  	@include bp('lg') {
+  		max-width: $site-wrapper-max-width;
+  		margin: 0 auto;
   	}
 }
 
@@ -59,7 +59,7 @@ body {
 
 
 /* ------------------------------------------------------------------------------------------------
-									items content blocs 
+									items content blocs
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -72,7 +72,7 @@ body {
 			background: $color-primary;
 			@include transition(all .2s ease);
 
-			.large-item__date, 
+			.large-item__date,
 			.large-item__link,
 			.large-item__title,
 			.large-item__intro,
@@ -133,7 +133,7 @@ body {
 
 
 /* ------------------------------------------------------------------------------------------------
-											Franchise detail 
+											Franchise detail
 ------------------------------------------------------------------------------------------------ */
 
 
@@ -149,7 +149,7 @@ body {
 ------------------------------------------------------------------------------------------------ */
 
 
-.wrapper--news-list { 
+.wrapper--news-list {
 	article {
 		border-bottom: none;
 		background: white;
@@ -167,20 +167,20 @@ body {
 			color: $gray-light;
 		}
 		.large-item__link {
-			color: $color-secondary;  
+			color: $color-secondary;
 		}
 		.large-item__title {
 			color: $gray-dark;
 
-			&:hover { 
-				color: $color-primary;  
-				@include transition(all .2s $ease-classic); 
+			&:hover {
+				color: $color-primary;
+				@include transition(all .2s $ease-classic);
 			}
 		}
 	}
 }
 
-.wrapper--articles-list { 
+.wrapper--articles-list {
 	article {
 		background: white;
 		border-bottom: none;
@@ -210,8 +210,8 @@ body {
 			.large-item__date,
 			.large-item__see-more,
 			.large-item__title {
-				color: white; 
-				@include transition(all .2s $ease-classic); 
+				color: white;
+				@include transition(all .2s $ease-classic);
 
 				svg { fill: white; }
 			}
@@ -238,7 +238,9 @@ body {
 		}
 
 		.search-container {
-			flex: 1 0 calc(100% - 8rem);
+			flex-grow: 1;
+	    flex-shrink: 0;
+	    flex-basis: calc( 100% - 8rem);
 
 			.hub__search {
 				padding: $gutter-half;
@@ -246,7 +248,9 @@ body {
 			}
 		}
 		.button-container {
-			flex: 1 0 7rem;
+			flex-grow: 1;
+	    flex-shrink: 0;
+	    flex-basis: 7rem;
 			text-align: center;
 			height: 4.2rem;
 
@@ -298,14 +302,18 @@ global TLF form override
     .franchise-line__bloc {
       display: flex;
       padding-right: $gutter-quarter;
-      flex: 0 0 100%;
+			flex-grow: 0;
+	    flex-shrink: 0;
+	    flex-basis: 100%;
 
-      @include bp('xs') { flex: 0 0 50%; }
-      @include bp('sm') { flex: 0 0 33%; }
-      @include bp('md') { flex: 0 0 20%; }
-      
+      @include bp('xs') { flex-basis: 50%; }
+      @include bp('sm') { flex-basis: 33%; }
+      @include bp('md') { flex-basis: 20%; }
+
       .bloc__img {
-        flex: 0 0 6rem;
+				flex-grow: 0;
+		    flex-shrink: 0;
+		    flex-basis: 6rem;
 
         img {
           border: 0.1rem solid $neutral-color-light;
@@ -313,11 +321,13 @@ global TLF form override
         }
       }
       .bloc__descr {
-        flex: 0 0 calc(100% - 6rem);
+				flex-grow: 0;
+		    flex-shrink: 0;
+		    flex-basis: calc( 100% - 6rem);
         padding: 0 0 0 $gutter-quarter;
         line-height: 1.2;
 
-        span, a { 
+        span, a {
           text-decoration: none;
           text-transform: uppercase;
           color: $color-primary;
@@ -333,7 +343,7 @@ global TLF form override
     margin-top: $gutter;
 
 
-    
+
     ul {
       border-bottom: 0.1rem solid $neutral-color-light;
       padding-bottom: $gutter-half;
@@ -344,14 +354,18 @@ global TLF form override
         display: flex;
         align-items: center;
         justify-content: space-between;
-        
+
         svg {
           fill: #00a362;
-          flex: 0 0 4rem;
+					flex-grow: 0;
+			    flex-shrink: 0;
+			    flex-basis: 4rem;
           margin-right: $gutter-quarter;
         }
-        p {   
-          flex: 0 0 calc(100% - 5rem);
+        p {
+					flex-grow: 0;
+			    flex-shrink: 0;
+			    flex-basis: calc( 100% - 5rem);
         }
       }
     }
@@ -408,7 +422,9 @@ global TLF form override
       margin-top: $gutter;
 
       .list-item__logo {
-        flex: 0 0 7rem;
+				flex-grow: 0;
+		    flex-shrink: 0;
+		    flex-basis: 7rem;
         margin-right: $gutter;
 
         svg {
@@ -416,7 +432,9 @@ global TLF form override
         }
       }
       .list-item__descrp {
-        flex: 0 0 calc(100% - 9rem);
+				flex-grow: 0;
+		    flex-shrink: 0;
+		    flex-basis: calc( 100% - 9rem);
 
         .list-item__text--big {
           color: $color-primary;
@@ -502,11 +520,11 @@ Static pages : 404, partners
 			width: 80%;
 			margin: 0 auto;
 		}
-		
+
 		.contact__header {
 			padding-top: $gutter;
 			border-bottom: 0.1rem solid $neutral-color-light;
-			
+
 			@include bp('md'){
 				background: url('../img/phone-pf.png') no-repeat right bottom;
 			}
@@ -537,10 +555,12 @@ Static pages : 404, partners
 			.contact__column {
 				display: flex;
 				flex-direction: column;
-				flex: 1 0 100%;
-				
+				flex-grow: 1;
+		    flex-shrink: 0;
+		    flex-basis: 100%;
+
 				@include bp('sm'){
-					flex: 1 0 50%;
+					flex-basis: 50%;
 
 					&.contact__column--1 {
 						padding: 0 $gutter-half 0 0;
