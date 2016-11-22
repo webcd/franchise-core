@@ -64,7 +64,7 @@ body {
 
 
 .wrapper--large-items, .wrapper--large-items-row  {
-	article {
+	article, .article {
 		@include transition(all .2s ease);
 
 		&:hover {
@@ -83,7 +83,7 @@ body {
 }
 
 .wrapper--large-items {
-	article {
+	article, .article {
 		@include bp('xs', true) {
 			&:not(:last-child) {
 				border-bottom: 0.1rem solid $neutral-color;
@@ -98,7 +98,7 @@ body {
 }
 
 .wrapper--large-items-row {
-	article {
+	article, .article {
 		&:not(:last-child) {
 			border-bottom: 0.1rem solid $neutral-color;
 		}
@@ -106,7 +106,7 @@ body {
 }
 
 .wrapper--medium-items  {
-	article {
+	article, .article {
 		@include bp('md', true) {
 			&:not(:last-child) {
 				border-bottom: 0.1rem solid $neutral-color;
@@ -150,7 +150,7 @@ body {
 
 
 .wrapper--news-list {
-	article {
+	article, .article {
 		border-bottom: none;
 		background: white;
 		@include transition(all .2s $ease-classic);
@@ -181,7 +181,7 @@ body {
 }
 
 .wrapper--articles-list {
-	article {
+	article, .article {
 		background: white;
 		border-bottom: none;
 		@include transition(all .2s $ease-classic);
