@@ -85,12 +85,12 @@ body {
 .wrapper--large-items {
 	article, .article {
 		@include bp('xs', true) {
-			&:not(:last-child) {
+			&:not(:last-of-type) {
 				border-bottom: 0.1rem solid $neutral-color;
 			}
 		}
 		@include bp('xs') {
-			&:not(:nth-last-child(-n+2)) {
+			&:not(:nth-last-of-type(-n+2)) {
 				border-bottom: 0.1rem solid $neutral-color;
 			}
 		}
@@ -99,7 +99,7 @@ body {
 
 .wrapper--large-items-row {
 	article, .article {
-		&:not(:last-child) {
+		&:not(:last-of-type) {
 			border-bottom: 0.1rem solid $neutral-color;
 		}
 	}
@@ -113,7 +113,7 @@ body {
 			}
 		}
 		@include bp('md') {
-			&:not(:nth-last-child(-n+2)) {
+			&:not(:nth-last-of-type(-n+2)) {
 				border-bottom: 0.1rem solid $neutral-color;
 			}
 		}
