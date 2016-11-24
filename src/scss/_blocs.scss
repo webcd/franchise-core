@@ -1369,8 +1369,7 @@ $bp-ad-banner: 'sm';
 Cart
 ------------------------------------------------------------------------------------------------ */
 
-
-$color-cart-bg: $gray-lighter;
+$color-cart-bg: #D9E6EE;
 
 body {
   overflow-x: hidden; // TMP - TODO remove
@@ -1413,7 +1412,8 @@ body {
 }
 
 .cart-content {
-  position: absolute;
+	background-color: $color-cart-bg;
+	position: absolute;
   bottom: 0;
   right: 0;
   transform: translateY(100%);
@@ -1429,14 +1429,44 @@ body {
     display: block;
   }
 
-  main {
-    max-height: 24rem;
-    padding: $gutter-half;
+	main {
+		position: relative;
+		background-color: white;
+		border-top: 2rem solid $color-cart-bg;
+		padding: $gutter-half;
+		padding-top: $gutter;
+		max-height: 24rem;
     overflow-y: auto;
-  }
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 2px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: $gutter-half $gutter-half 0 $gutter-half;
+			border-color: $color-cart-bg transparent transparent transparent;
+		}
+	}
 
   footer {
-    padding: $gutter-half;
+		position: relative;
+		padding: $gutter-half;
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			display: block;
+			height: 4rem;
+			background-color: white;
+			z-index: -1;
+		}
   }
 }
 
@@ -1462,7 +1492,7 @@ body {
 
   > div {
     height: 6.4rem;
-    border: 1px solid black;
+		border: 1px solid $gray-lighter;
 
     > img {
 
@@ -1505,6 +1535,15 @@ body {
     }
   }
 }
+
+.btn--cart-close {
+	background-color: transparent;
+	&:hover {
+		background-color: transparent;
+		text-decoration: underline;
+	}
+}
+
 
 /* ------------------------------------------------------------------------------------------------
 	Anchor Tiles
