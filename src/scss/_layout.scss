@@ -183,7 +183,7 @@ body {
 .wrapper--articles-list {
 	article, .article {
 		background: white;
-		border-bottom: none;
+		border-bottom: 0.1rem solid $neutral-color;
 		@include transition(all .2s $ease-classic);
 		.large-item {
 			padding: $gutter-half $gutter;
