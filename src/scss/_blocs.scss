@@ -1505,3 +1505,26 @@ body {
     }
   }
 }
+
+/* ------------------------------------------------------------------------------------------------
+	Anchor Tiles
+------------------------------------------------------------------------------------------------ */
+.article {
+	display: block;
+	// text-decoration: none;
+
+	&:hover {
+		.large-item__see-more {
+			text-decoration: underline;
+		}
+	}
+}
+
+a.article {
+	text-decoration: none;
+	color: black;
+
+  &:not(.small-item-container):hover {
+    color: white;
+  }
+}
