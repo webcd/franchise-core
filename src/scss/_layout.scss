@@ -4,21 +4,21 @@
 
 /* ------------------------------------------------------------------------------------------------
 									Generic content blocs
------------------------------------------------------------------------------------------------- */
+									------------------------------------------------------------------------------------------------ */
 
 
-body {
-	background: #f1f1f1;
-}
+									body {
+										background: #f1f1f1;
+									}
 
-.site-wrapper {
+									.site-wrapper {
 	//position: relative;
 	background: white;
 
-  	@include bp('lg') {
-  		max-width: $site-wrapper-max-width;
-  		margin: 0 auto;
-  	}
+	@include bp('lg') {
+		max-width: $site-wrapper-max-width;
+		margin: 0 auto;
+	}
 }
 
 .static-content {
@@ -60,230 +60,230 @@ body {
 
 /* ------------------------------------------------------------------------------------------------
 									items content blocs
------------------------------------------------------------------------------------------------- */
+									------------------------------------------------------------------------------------------------ */
 
 
-.wrapper--large-items, .wrapper--large-items-row  {
-	article, .article {
-		@include transition(all .2s ease);
+									.wrapper--large-items, .wrapper--large-items-row  {
+										article, .article {
+											@include transition(all .2s ease);
 
-		&:hover {
-			color: white;
-			background: $color-primary;
-			@include transition(all .2s ease);
+											&:hover {
+												color: white;
+												background: $color-primary;
+												@include transition(all .2s ease);
 
-			.large-item__date,
-			.large-item__link,
-			.large-item__title,
-			.large-item__intro,
-			.large-item__see-more { color: white;  @include transition(all .2s ease); }
-			svg { fill: white; }
-		}
-	}
-}
+												.large-item__date,
+												.large-item__link,
+												.large-item__title,
+												.large-item__intro,
+												.large-item__see-more { color: white;  @include transition(all .2s ease); }
+												svg { fill: white; }
+											}
+										}
+									}
 
-.wrapper--large-items {
-	article, .article {
-		@include bp('xs', true) {
-			&:not(:last-of-type) {
-				border-bottom: 0.1rem solid $neutral-color;
-			}
-		}
-		@include bp('xs') {
-			&:not(:nth-last-of-type(-n+2)) {
-				border-bottom: 0.1rem solid $neutral-color;
-			}
-		}
-	}
-}
+									.wrapper--large-items {
+										article, .article {
+											@include bp('xs', true) {
+												&:not(:last-of-type) {
+													border-bottom: 0.1rem solid $neutral-color;
+												}
+											}
+											@include bp('xs') {
+												&:not(:nth-last-of-type(-n+2)) {
+													border-bottom: 0.1rem solid $neutral-color;
+												}
+											}
+										}
+									}
 
-.wrapper--large-items-row {
-	article, .article {
-		&:not(:last-of-type) {
-			border-bottom: 0.1rem solid $neutral-color;
-		}
-	}
-}
+									.wrapper--large-items-row {
+										article, .article {
+											&:not(:last-of-type) {
+												border-bottom: 0.1rem solid $neutral-color;
+											}
+										}
+									}
 
-.wrapper--medium-items  {
-	article, .article {
-		@include bp('md', true) {
-			&:not(:last-child) {
-				border-bottom: 0.1rem solid $neutral-color;
-			}
-		}
-		@include bp('md') {
-			&:not(:nth-last-of-type(-n+2)) {
-				border-bottom: 0.1rem solid $neutral-color;
-			}
-		}
+									.wrapper--medium-items  {
+										article, .article {
+											@include bp('md', true) {
+												&:not(:last-child) {
+													border-bottom: 0.1rem solid $neutral-color;
+												}
+											}
+											@include bp('md') {
+												&:not(:nth-last-of-type(-n+2)) {
+													border-bottom: 0.1rem solid $neutral-color;
+												}
+											}
 
-		@include transition(all .2s ease);
+											@include transition(all .2s ease);
 
-		&:hover {
-			color: white;
-			background: $color-primary;
-			@include transition(all .2s ease);
+											&:hover {
+												color: white;
+												background: $color-primary;
+												@include transition(all .2s ease);
 
-			.medium-item__title,
-			.medium-item__intro { color: white;  @include transition(all .2s ease); }
-		}
-	}
-}
+												.medium-item__title,
+												.medium-item__intro { color: white;  @include transition(all .2s ease); }
+											}
+										}
+									}
 
 
 /* ------------------------------------------------------------------------------------------------
 											Franchise detail
------------------------------------------------------------------------------------------------- */
+											------------------------------------------------------------------------------------------------ */
 
 
-.wrapper--hiring {
-	background: $color-ternary;
-	padding: 0;
-	margin-top: $gutter-double;
-}
+											.wrapper--hiring {
+												background: $color-ternary;
+												padding: 0;
+												margin-top: $gutter-double;
+											}
 
 
 /* ------------------------------------------------------------------------------------------------
 										 articles / news list
------------------------------------------------------------------------------------------------- */
+										 ------------------------------------------------------------------------------------------------ */
 
 
-.wrapper--news-list {
-	article, .article {
-		border-bottom: none;
-		background: white;
-		@include transition(all .2s $ease-classic);
+										 .wrapper--news-list {
+										 	article, .article {
+										 		border-bottom: none;
+										 		background: white;
+										 		@include transition(all .2s $ease-classic);
 
-		&:hover {
-			background: $color-primary;
-		}
+										 		&:hover {
+										 			background: $color-primary;
+										 		}
 
-		.large-item {
-			padding: $gutter $gutter $gutter-half 0;
-		}
-		.large-item__date {
-			text-transform: initial;
-			color: $gray-light;
-		}
-		.large-item__link {
-			color: $color-secondary;
-		}
-		.large-item__title {
-			color: $gray-dark;
+										 		.large-item {
+										 			padding: $gutter $gutter $gutter-half 0;
+										 		}
+										 		.large-item__date {
+										 			text-transform: initial;
+										 			color: $gray-light;
+										 		}
+										 		.large-item__link {
+										 			color: $color-secondary;
+										 		}
+										 		.large-item__title {
+										 			color: $gray-dark;
 
-			&:hover {
-				color: $color-primary;
-				@include transition(all .2s $ease-classic);
-			}
-		}
-	}
-}
+										 			&:hover {
+										 				color: $color-primary;
+										 				@include transition(all .2s $ease-classic);
+										 			}
+										 		}
+										 	}
+										 }
 
-.wrapper--articles-list {
-	article, .article {
-		background: white;
-		border-bottom: 0.1rem solid $neutral-color;
-		@include transition(all .2s $ease-classic);
-		.large-item {
-			padding: $gutter-half $gutter;
-		}
-		.large-item__date {
-			text-transform: uppercase;
-			color: $gray-light;
-			font-size: $font-size-mini;
-		}
-		.large-item__see-more {
-			color: $gray-light;
+										 .wrapper--articles-list {
+										 	article, .article {
+										 		background: white;
+										 		border-bottom: 0.1rem solid $neutral-color;
+										 		@include transition(all .2s $ease-classic);
+										 		.large-item {
+										 			padding: $gutter-half $gutter;
+										 		}
+										 		.large-item__date {
+										 			text-transform: uppercase;
+										 			color: $gray-light;
+										 			font-size: $font-size-mini;
+										 		}
+										 		.large-item__see-more {
+										 			color: $gray-light;
 
-			svg { fill: $gray-light; }
-		}
-		.large-item__title {
-			color: $color-primary;
-			text-transform: initial;
-		}
+										 			svg { fill: $gray-light; }
+										 		}
+										 		.large-item__title {
+										 			color: $color-primary;
+										 			text-transform: initial;
+										 		}
 
-		&:hover {
-			background: $color-primary;
+										 		&:hover {
+										 			background: $color-primary;
 
-			.large-item,
-			.large-item__date,
-			.large-item__see-more,
-			.large-item__title {
-				color: white;
-				@include transition(all .2s $ease-classic);
+										 			.large-item,
+										 			.large-item__date,
+										 			.large-item__see-more,
+										 			.large-item__title {
+										 				color: white;
+										 				@include transition(all .2s $ease-classic);
 
-				svg { fill: white; }
-			}
-		}
-	}
-}
+										 				svg { fill: white; }
+										 			}
+										 		}
+										 	}
+										 }
 
 
 /* ------------------------------------------------------------------------------------------------
 										Hub
------------------------------------------------------------------------------------------------- */
+										------------------------------------------------------------------------------------------------ */
 
 
-.hub {
-	.hub__search-form {
-		background: $color-secondary;
-		display: flex;
-		flex-wrap: wrap;
-		padding: $gutter;
+										.hub {
+											.hub__search-form {
+												background: $color-secondary;
+												display: flex;
+												flex-wrap: wrap;
+												padding: $gutter;
 
-		@include bp(xs){
-			margin-left: $gutter;
-			margin-right: $gutter;
-		}
+												@include bp(xs){
+													margin-left: $gutter;
+													margin-right: $gutter;
+												}
 
-		.search-container {
-			flex-grow: 1;
-	    flex-shrink: 0;
-	    flex-basis: calc( 100% - 8rem);
+												.search-container {
+													flex-grow: 1;
+													flex-shrink: 0;
+													flex-basis: calc( 100% - 8rem);
 
-			.hub__search {
-				padding: $gutter-half;
-				border: none;
-			}
-		}
-		.button-container {
-			flex-grow: 1;
-	    flex-shrink: 0;
-	    flex-basis: 7rem;
-			text-align: center;
-			height: 4.2rem;
+													.hub__search {
+														padding: $gutter-half;
+														border: none;
+													}
+												}
+												.button-container {
+													flex-grow: 1;
+													flex-shrink: 0;
+													flex-basis: 7rem;
+													text-align: center;
+													height: 4.2rem;
 
-			.hub__submit {
-				width: 5.5rem;
-				height: 5.5rem;
-				background: none;
-				border: none;
-				cursor: pointer;
-				outline: none;
-				padding: $gutter-quarter;
-				margin-top: -$gutter-quarter;
+													.hub__submit {
+														width: 5.5rem;
+														height: 5.5rem;
+														background: none;
+														border: none;
+														cursor: pointer;
+														outline: none;
+														padding: $gutter-quarter;
+														margin-top: -$gutter-quarter;
 
-				svg {
-					fill: white;
-					transform: rotate(0deg);
-					transition: transform 0.2s ease;
-				}
-			}
-			&:hover {
-				.hub__submit {
-					background: white;
+														svg {
+															fill: white;
+															transform: rotate(0deg);
+															transition: transform 0.2s ease;
+														}
+													}
+													&:hover {
+														.hub__submit {
+															background: white;
 
-					svg {
-						fill: $color-secondary;
-						transform: rotate(7deg);
-						transition: transform 0.2s ease;
-					}
-				}
-			}
-		}
-	}
-}
+															svg {
+																fill: $color-secondary;
+																transform: rotate(7deg);
+																transition: transform 0.2s ease;
+															}
+														}
+													}
+												}
+											}
+										}
 
 
 
@@ -294,162 +294,167 @@ global TLF form override
 
 .wrapper--demande-doc {
 
-  .franchise-line {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+	.franchise-line {
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
 
-    .franchise-line__bloc {
-      display: flex;
-      padding-right: $gutter-quarter;
+		.franchise-line__bloc {
+			display: flex;
+			padding-right: $gutter-quarter;
 			flex-grow: 0;
-	    flex-shrink: 0;
-	    flex-basis: 100%;
+			flex-shrink: 0;
+			flex-basis: 100%;
 
-      @include bp('xs') { flex-basis: 50%; }
-      @include bp('sm') { flex-basis: 33%; }
-      @include bp('md') { flex-basis: 20%; }
+			@include bp('xs') { flex-basis: 50%; }
+			@include bp('sm') { flex-basis: 33%; }
+			@include bp('md') { flex-basis: 20%; }
 
-      .bloc__img {
+			.bloc__img {
 				flex-grow: 0;
-		    flex-shrink: 0;
-		    flex-basis: 6rem;
+				flex-shrink: 0;
+				flex-basis: 6rem;
 
-        img {
-          border: 0.1rem solid $neutral-color-light;
-          max-width: 100%;
-        }
-      }
-      .bloc__descr {
+				img {
+					border: 0.1rem solid $neutral-color-light;
+					max-width: 100%;
+				}
+			}
+			.bloc__descr {
+
 				flex-grow: 0;
-		    flex-shrink: 0;
-		    flex-basis: calc( 100% - 6rem);
-        padding: 0 0 0 $gutter-quarter;
-        line-height: 1.2;
+				flex-shrink: 0;
+				flex-basis: calc( 100% - 6rem);
+				padding: 0 0 0 $gutter-quarter;
+				line-height: 1.2;
 
-        span, a {
-          text-decoration: none;
-          text-transform: uppercase;
-          color: $color-primary;
-          margin: 0;
-          font-size: $font-size-small;
-          font-weight: bold;
-        }
-      }
-    }
-  }
+				span, a {
+					text-decoration: none;
+					text-transform: uppercase;
+					color: $color-primary;
+					margin: 0;
+					font-size: $font-size-small;
+					font-weight: bold;
+				}
+			}
+		}
+	}
 
-  .aside-list {
-    margin-top: $gutter;
+	.aside-list {
+		margin-top: $gutter;
 
 
 
-    ul {
-      border-bottom: 0.1rem solid $neutral-color-light;
-      padding-bottom: $gutter-half;
+		ul {
+			border-bottom: 0.1rem solid $neutral-color-light;
+			padding-bottom: $gutter-half;
 
-      li {
-        overflow: auto;
-        border: none;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+			li {
+				overflow: auto;
+				border: none;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
 
-        svg {
-          fill: #00a362;
+				svg {
+					fill: #00a362;
 					flex-grow: 0;
-			    flex-shrink: 0;
-			    flex-basis: 4rem;
-          margin-right: $gutter-quarter;
-        }
-        p {
+					flex-shrink: 0;
+					flex-basis: 4rem;
+					margin-right: $gutter-quarter;
+				}
+				p {
 					flex-grow: 0;
-			    flex-shrink: 0;
-			    flex-basis: calc( 100% - 5rem);
-        }
-      }
-    }
-  }
+					flex-shrink: 0;
+					flex-basis: calc( 100% - 5rem);
+				}
+			}
+		}
+	}
 
   // specific override for centralised form
   .demande-doc {
-    background: $color-ternary;
-    padding: $gutter-quarter $gutter $gutter-quarter 2.3 * $gutter;
-    margin-top: $gutter;
+  	background: $color-ternary;
+  	padding: $gutter-quarter $gutter $gutter-quarter 2.3 * $gutter;
+  	margin-top: $gutter;
 
-    form {
-      padding: 0;
+  	form {
+  		padding: 0;
 
-      input[type="submit"] {
-        @extend .btn;
-        @extend .btn-primary;
-        @extend .btn-block;
-        @extend .btn-big;
+  		input[type="submit"] {
+  			@extend .btn;
+  			@extend .btn-primary;
+  			@extend .btn-block;
+  			@extend .btn-big;
 
-        width: 93%;
-      }
-      select {
-        @extend .select;
-        padding: 0 $gutter-half;
+  			width: 93%;
+  		}
+  		input[type="submit"]:hover { /* sorry for that */
+		  	background: $color-secondary !important;
+		  	color: white !important;
+		}
+  		select {
+  			@extend .select;
+  			padding: 0 $gutter-half;
 
-        @include bp('md'){
-            width: 80% !important;
-        }
-      }
-      p {
-        color: $gray-light;
-        font-style: italic;
-      }
-    }
+  			@include bp('md'){
+  				width: 80% !important;
+  			}
+  		}
+  		p {
+  			color: $gray-light;
+  			font-style: italic;
+  		}
+  	}
   }
 }
 
 
 .wrapper--demande-doc-sent {
-  .list {
-    margin: $gutter-double auto $gutter auto;
-    padding-top: $gutter-double;
-    border-top: 0.1rem solid $neutral-color-light;
-    @include bp('md'){ width: 80%; }
-    @include bp('lg'){ width: 60%; }
+	.list {
+		margin: $gutter-double auto $gutter auto;
+		padding-top: $gutter-double;
+		border-top: 0.1rem solid $neutral-color-light;
+		@include bp('md'){ width: 80%; }
+		@include bp('lg'){ width: 60%; }
 
-    .list-item {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      list-style-type: none;
-      line-height: 1.2;
-      margin-top: $gutter;
+		.list-item {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			list-style-type: none;
+			line-height: 1.2;
+			margin-top: $gutter;
 
-      .list-item__logo {
+			.list-item__logo {
 				flex-grow: 0;
-		    flex-shrink: 0;
-		    flex-basis: 7rem;
-        margin-right: $gutter;
+				flex-shrink: 0;
+				flex-basis: 7rem;
+				margin-right: $gutter;
 
-        svg {
-        	fill: $color-primary;
-        }
-      }
-      .list-item__descrp {
+				svg {
+					fill: $color-primary;
+				}
+			}
+			.list-item__descrp {
 				flex-grow: 0;
-		    flex-shrink: 0;
-		    flex-basis: calc( 100% - 9rem);
+				flex-shrink: 0;
+				flex-basis: calc( 100% - 9rem);
 
-        .list-item__text--big {
-          color: $color-primary;
-          font-size: $font-size-mega;
-        }
-        .list-item__text--small {
-          font-size: $font-size-small;
-          color: $gray-light;
-        }
-        a {
-          color: $color-primary;
-        }
-      }
-    }
-  }
+				.list-item__text--big {
+					color: $color-primary;
+					font-size: $font-size-mega;
+				}
+				.list-item__text--small {
+					font-size: $font-size-small;
+					color: $gray-light;
+				}
+				a {
+					color: $color-primary;
+				}
+			}
+		}
+	}
 }
 
 
@@ -556,8 +561,8 @@ Static pages : 404, partners
 				display: flex;
 				flex-direction: column;
 				flex-grow: 1;
-		    flex-shrink: 0;
-		    flex-basis: 100%;
+				flex-shrink: 0;
+				flex-basis: 100%;
 
 				@include bp('sm'){
 					flex-basis: 50%;
@@ -599,8 +604,8 @@ Static pages : 404, partners
 		color: #FF5F60;
 	}
 	input[type="text"].error {
-	    background: url(../img/cross.svg);
-	    background-repeat: no-repeat;
-	    background-position: right top;
+		background: url(../img/cross.svg);
+		background-repeat: no-repeat;
+		background-position: right top;
 	}
 }
