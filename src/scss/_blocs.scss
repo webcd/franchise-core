@@ -105,7 +105,8 @@
 		flex-shrink: 0;
 		flex-basis: 100%;
 		text-align: center;
-		border: 0.1rem solid $neutral-color;
+
+		img { border: 0.1rem solid $neutral-color; }
 
 		@include bp(xs) {
 			flex-basis: 15%;
