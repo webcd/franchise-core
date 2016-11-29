@@ -566,6 +566,7 @@ Static pages : 404, partners
 
 				@include bp('sm'){
 					flex-basis: 50%;
+					min-width: 50%;
 
 					&.contact__column--1 {
 						padding: 0 $gutter-half 0 0;
