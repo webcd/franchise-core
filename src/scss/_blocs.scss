@@ -433,7 +433,7 @@
 .aside-list {
 	margin: $gutter-double 0;
 
-	h2, .aside-list__title {
+	h2, .h2, .aside-list__title {
 		display: block;
 		font-size: $font-size-base;
 		letter-spacing: -0.5px;
