@@ -321,7 +321,6 @@ global TLF form override
 				}
 			}
 			.bloc__descr {
-
 				flex-grow: 0;
 				flex-shrink: 0;
 				flex-basis: calc( 100% - 6rem);
@@ -374,7 +373,7 @@ global TLF form override
 
   // specific override for centralised form
   .demande-doc {
-  	background: $color-ternary;
+  	background: $neutral-color-light;
   	padding: $gutter-quarter $gutter $gutter-quarter 2.3 * $gutter;
   	margin-top: $gutter;
 
@@ -390,8 +389,8 @@ global TLF form override
   			width: 93%;
   		}
   		input[type="submit"]:hover { /* sorry for that */
-		  	background: $color-primary !important;
-		  	color: white !important;
+		  	//background: $color-primary !important;
+		  	//color: white !important;
 		}
   		select {
   			@extend .select;
