@@ -126,7 +126,7 @@
 			flex-basis: 85%;
 		}
 		@include bp(lg) {
-			flex-basis: 28%;
+			flex-basis: 22%;
 			padding: 0 $gutter-quarter;
 		}
 
@@ -161,7 +161,7 @@
 		.franchise-item__stat {
 			display: flex;
 			justify-content: space-between;
-			flex-wrap: wrap;
+			//flex-wrap: wrap;
 			padding-top: $gutter-half;
 
 			&:last-child {
@@ -199,7 +199,7 @@
 		margin: $gutter-half 0 0 0;
 
 		.btn { width: 100%; margin: $gutter-quarter; }
-		span { text-align: center; }
+		span { text-align: center; font-size: 1.4rem; }
 
 		@include bp(xs) {
 			justify-content: center;
