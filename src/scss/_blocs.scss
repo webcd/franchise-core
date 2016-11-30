@@ -36,10 +36,10 @@
 		padding: 0 $gutter;
 
 		@include bp(xs) {
-			flex-basis: 85%;
+			flex-basis: 84%;
 		}
 		@include bp(lg) {
-			flex-basis: 55%;
+			flex-basis: 54%;
 		}
 
 		a {
@@ -67,7 +67,7 @@
 		flex-basis: 100%;
 		justify-content: flex-end;
 
-		.btn { width: 100%; margin: $gutter-quarter; }
+		.btn { width: 100%; min-width: 100%; margin: $gutter-quarter; }
 		span { text-align: center; }
 
 		@include bp(xs) {
@@ -77,7 +77,7 @@
 		}
 		@include bp(lg) {
 			flex-basis: 25%;
-			.btn { width: 100%; }
+			.btn { width: 100%; min-width: 21rem; }
 		}
 	}
 }
