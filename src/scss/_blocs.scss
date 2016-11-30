@@ -944,7 +944,9 @@
 	.terms-list__col {
 		padding: 0 $gutter;
 
-		.terms-bloc { display: none; }
+		.terms-bloc { //
+			//display: none; 
+		}
 		@include bp(xs){
 			.terms-bloc { display: block; }
 		}
