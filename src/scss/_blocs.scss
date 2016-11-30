@@ -439,7 +439,7 @@
 		letter-spacing: -0.5px;
 		text-transform: uppercase;
 		font-weight: normal;
-		line-height: 1.2;
+		line-height: 1.1;
 		padding-bottom: $gutter-quarter;
 		border-bottom: 0.5rem solid $neutral-color-light;
 	}
@@ -462,10 +462,14 @@
 			}
 			span {
 				color: $color-primary;
+				line-height: 1.2;
 			}
 			p {
 				margin: 0;
 				line-height: 1.2;
+			}
+			img {
+				border: 0.1rem solid $neutral-color;
 			}
 		}
 	}
