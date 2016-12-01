@@ -1233,7 +1233,8 @@ $bp-ad-banner: 'sm';
   padding-bottom: $gutter-quarter;
   height: $gutter-double + 2 * $gutter-quarter; // fixed, computed height
   background-color: rgba(255,255,255,1);
-  @include shadow(1);
+  //@include shadow(1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.5s;
 
   /*body*/.is-home & {
@@ -1243,7 +1244,8 @@ $bp-ad-banner: 'sm';
 
   /*body*/.menu--bg:not(.overlay--active) & {
     background-color: rgba(255,255,255,1);
-    @include shadow(1);
+    //@include shadow(1);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   }
   /*body*/.overlay--active & {
     background-color: rgba(255,255,255,0);
