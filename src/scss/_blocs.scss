@@ -110,10 +110,12 @@
 
 		@include bp(xs) {
 			flex-basis: 15%;
+			max-width: 15%;
 			text-align: left;
 		}
 		@include bp(lg) {
 			flex-basis: 5%;
+			max-width: 5%;
 		}
 	}
 	.franchise-item__content {
@@ -1499,14 +1501,14 @@ body {
 	flex-shrink: 0;
 	flex-basis: 6.4rem;
 
-  > div {
-    height: 6.4rem;
-		border: 1px solid $gray-lighter;
+	> div {
+		height: 7.4rem;
 
-    > img {
-
-    }
-  }
+		> img {
+			max-width: 6.2rem;
+			border: 1px solid $gray-lighter;
+		}
+	}
 }
 
 .cart-item__title {

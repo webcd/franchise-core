@@ -314,6 +314,7 @@ global TLF form override
 				flex-grow: 0;
 				flex-shrink: 0;
 				flex-basis: 6rem;
+				max-width: 6rem;
 
 				img {
 					border: 0.1rem solid $neutral-color-light;
