@@ -268,7 +268,7 @@
 			height: 7rem;
 			border-left: none;
 
-			@include bp(xs){ border-left: 0.1rem solid $neutral-color-light; }
+			@include bp(xs){ border-left: none; }
 			@include bp(sm){ border-left: none; }
 			@include bp(md){ border-left: none; }
 			@include bp(lg){ border-left: 0.1rem solid $neutral-color-light; }
