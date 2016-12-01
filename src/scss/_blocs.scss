@@ -280,17 +280,15 @@
 	}
 }
 .general-infos--mobile {
-	border: none;
+	
 	display: block;
 	@include bp(xs){ display: none; }
-
-	.general-infos__location {
-		border-left: 0.1rem solid $neutral-color-light; 
-	}
+	.general-infos { border: none; }
+	.general-infos__location { border-left: 0.1rem solid $neutral-color-light; }
 }
 .general-infos--all {
 	display: none;
-	@include bp(xs){ display: flex; }
+	@include bp(xs){ display: block; }
 }
 
 .secondary-infos {
