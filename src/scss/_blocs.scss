@@ -292,7 +292,9 @@
 }
 
 .secondary-infos {
-	margin-top: $gutter-double;
+	@include bp(sm){
+		margin-top: $gutter-double;
+	}
 }
 
 .franchise__cover {
