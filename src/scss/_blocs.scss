@@ -238,16 +238,14 @@
 
 
 .general-infos {
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
 	margin-top: $gutter;
 	padding: $gutter-half;
 	background: white;
 	border: 0.1rem solid $neutral-color-light;
-
-	@include bp(sm){
-		margin-top: -$gutter;
-	}
+	@include bp(xs){ display: flex; }
+	@include bp(sm){ margin-top: -$gutter; 	}
 
 	.general-infos__price, .general-infos__location  {
 		flex-grow: 1;
@@ -268,7 +266,7 @@
 			display: block;
 			width: 0.1rem;
 			height: 7rem;
-			border-left: none;
+			border-left: 0.1rem solid $neutral-color-light;
 
 			@include bp(xs){ border-left: 0.1rem solid $neutral-color-light; }
 			@include bp(sm){ border-left: none; }
