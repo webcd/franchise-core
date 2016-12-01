@@ -284,10 +284,9 @@
 	}
 }
 .general-infos--mobile {
-	
 	display: block;
 	@include bp(sm){ display: none; }
-	.general-infos { border: none; }
+	.general-infos { display: block; border: none; }
 	.general-infos__location { border-left: 0.1rem solid $neutral-color-light; }
 }
 .general-infos--all {
