@@ -283,6 +283,10 @@
 	border: none;
 	display: block;
 	@include bp(xs){ display: none; }
+
+	.general-infos__location {
+		border-left: 0.1rem solid $neutral-color-light; 
+	}
 }
 .general-infos--all {
 	display: none;
