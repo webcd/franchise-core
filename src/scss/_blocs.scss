@@ -110,12 +110,12 @@
 
 		@include bp(xs) {
 			flex-basis: 15%;
-			max-width: 15%;
+			width: 15%;
 			text-align: left;
 		}
 		@include bp(lg) {
 			flex-basis: 5%;
-			max-width: 5%;
+			width: 5%;
 		}
 	}
 	.franchise-item__content {
