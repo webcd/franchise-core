@@ -280,6 +280,11 @@
 		margin-bottom: $gutter;
 	}
 }
+.general-infos--mobile {
+	border: none;
+	display: block;
+	@include bp(xs){ display: none; }
+}
 
 .secondary-infos {
 	margin-top: $gutter-double;
