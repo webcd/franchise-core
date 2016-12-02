@@ -345,6 +345,8 @@
 		&:first-child {
 			/* pfff sorry for that */
 			background: #EEC131;
+
+			&:hover { background: $color-primary; }
 		}
 
 		@include bp(xs){
