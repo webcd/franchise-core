@@ -1360,6 +1360,12 @@ $bp-ad-banner: 'sm';
     }
   }
 
+  > .search-form__btn .svg {
+  	/*body*/.menu--bg:not(.overlay--active) & {
+      fill: white;
+    }
+  }
+
   // Menu button with a text label
   > span {
     display: none; // Hidden on mobile
