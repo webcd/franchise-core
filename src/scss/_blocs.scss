@@ -281,7 +281,7 @@
 	.btn {
 		font-weight: normal;
 		margin-bottom: $gutter;
-		background: #EEC131;
+		background: $color-doc;
 
 		&:hover { background: $color-primary; }
 	}
@@ -295,6 +295,12 @@
 .general-infos--all {
 	display: none;
 	@include bp(sm){ display: block; }
+
+	.btn {
+		background: $color-doc;
+
+		&:hover { background: $color-primary; }
+	}
 }
 
 .secondary-infos {
