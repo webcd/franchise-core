@@ -300,6 +300,8 @@
 	}
 }
 
+
+
 .franchise__cover {
 	text-align: center;
 	min-height: 22rem;
@@ -338,9 +340,15 @@
 
 	.btn {
 		margin: $gutter-quarter 0;
+		min-width: 30rem;
+
+		&:first-child {
+			/* pfff sorry for that */
+			background: #EEC131;
+		}
 
 		@include bp(xs){
-			margin: 0;
+			margin: 0 $gutter-half;
 		}
 	}
 }
