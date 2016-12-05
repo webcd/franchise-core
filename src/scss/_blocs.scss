@@ -213,7 +213,6 @@
 
 				span {
 					display: block;
-					font-weight: bold;
 					line-height: 1.4;
 				}
 			}
@@ -775,7 +774,7 @@
 	.large-item__see-more {
 		font-size: $font-size-small;
 		text-decoration: none;
-		color: $gray-darkest;
+		color: #7f7f7f;
 		font-weight: bold;
 
 		svg {
