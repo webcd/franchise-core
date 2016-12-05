@@ -158,33 +158,57 @@
 		flex-grow: 1;
 		flex-shrink: 0;
 		flex-basis: 100%;
+		flex-wrap: wrap;
 		padding: 0 $gutter-quarter 0 $gutter-half;
+		display: flex;
+		justify-content: center;
 
 		@include bp(lg){
 			border-left: 0.1rem solid $neutral-color-light;
 			flex-basis: 17%;
+			justify-content: space-between;
 		}
 
 		.franchise-item__stat {
+			flex-grow: 1;
+			flex-shrink: 0;
+			flex-basis: 100%;
 			display: flex;
 			justify-content: space-between;
-			//flex-wrap: wrap;
+			flex-wrap: wrap;
+			text-align: center;
 			padding-top: $gutter-half;
 
-			&:last-child {
-				margin-top: $gutter-half;
+			&:last-child { margin-top: 0; }
+
+			@include bp(xs){
+				flex-basis: 50%;
 			}
+			@include bp(lg){
+				flex-basis: 100%;
+
+				&:last-child { margin-top: $gutter-half; }
+			}
+
 			.stats__logo {
 				flex-grow: 1;
 				flex-shrink: 0;
-				flex-basis: 3.6rem;
+				flex-basis: 100%;
 				align-self: center;
+
+				@include bp(lg){
+					flex-basis: 3.6rem;
+				}
 			}
 			.stats__number {
 				flex-grow: 1;
 				flex-shrink: 0;
-				flex-basis: calc(100% - 3.6rem);
+				flex-basis: 100%;
 				padding-left: $gutter-quarter;
+
+				@include bp(lg){
+					flex-basis: calc(100% - 3.6rem);
+				}
 
 				span {
 					display: block;
