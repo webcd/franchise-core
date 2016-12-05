@@ -316,6 +316,12 @@
 	@include bp(sm){ display: none; }
 	.general-infos { display: flex; border: none; }
 	.general-infos__location { border-left: 0.1rem solid $neutral-color-light; }
+
+	.btn {
+		background: $color-doc;
+
+		&:hover { background: $color-primary; }
+	}
 }
 .general-infos--all {
 	display: none;
