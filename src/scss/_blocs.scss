@@ -1077,6 +1077,7 @@
 	li {
 		list-style-type: none;
 		padding: $gutter-eighth $gutter-quarter;
+		margin: 0 0 0 $gutter-quarter;
 		color: $color-primary;
 		display: inline-block;
 		font-size: $font-size-small;
@@ -1356,12 +1357,6 @@ $bp-ad-banner: 'sm';
     }
 
     /*body*/.overlay--active & {
-      fill: white;
-    }
-  }
-
-  > .search-form__btn .svg {
-  	/*body*/.menu--bg:not(.overlay--active) & {
       fill: white;
     }
   }
