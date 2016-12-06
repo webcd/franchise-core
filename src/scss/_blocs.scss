@@ -1454,7 +1454,7 @@ $bp-ad-banner: 'sm';
 Cart
 ------------------------------------------------------------------------------------------------ */
 
-$color-cart-bg: #D9E6EE;
+$color-cart-bg: #e5e5e5; //#D9E6EE;
 
 body {
   overflow-x: hidden; // TMP - TODO remove
@@ -1497,8 +1497,8 @@ body {
 }
 
 .cart-content {
-	background-color: $color-cart-bg;
-	position: absolute;
+  background-color: $color-cart-bg;
+  position: absolute;
   bottom: 0;
   right: 0;
   transform: translateY(100%);
@@ -1510,6 +1510,16 @@ body {
   //@include shadow(1);
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1), 0 0.5rem 0.6rem rgba(0, 0, 0, 0.12)
   display: none; // hidden by default
+
+  .btn--cart-checkout {
+    background: $color-doc;
+    color: black;
+
+    &:hover {
+      background: $color-primary;
+      color: white;
+    }
+  }
 
   /*body*/.cart--open & {
     display: block;
