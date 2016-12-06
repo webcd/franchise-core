@@ -389,7 +389,7 @@
 			&:hover { background: $color-primary; }
 		}
 
-		@include bp(xs){
+		@include bp(sm){
 			margin: 0 $gutter-half;
 		}
 	}
@@ -1507,7 +1507,8 @@ body {
   max-width: 32rem; // 320px wide
   z-index: 2000;
   background-color: $color-cart-bg;
-  @include shadow(1);
+  //@include shadow(1);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.1), 0 0.5rem 0.6rem rgba(0, 0, 0, 0.12)
   display: none; // hidden by default
 
   /*body*/.cart--open & {
