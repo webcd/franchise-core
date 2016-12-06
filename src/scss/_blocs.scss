@@ -128,9 +128,11 @@
 		flex-shrink: 0;
 		flex-basis: 100%;
 		padding: 0 $gutter-half;
+		text-align: center;
 
 		@include bp(xs) {
 			flex-basis: 85%;
+			text-align: center;
 		}
 		@include bp(lg) {
 			flex-basis: 22%;
