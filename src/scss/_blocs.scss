@@ -1541,7 +1541,7 @@ body {
 		&:before {
 			content: "";
 			position: absolute;
-			top: 2px;
+			top: 0;
 			left: 50%;
 			transform: translateX(-50%);
 			width: 0;
@@ -1608,6 +1608,7 @@ body {
   font-weight: bold;
   text-transform: uppercase;
   max-width: 16rem;
+  transform: translateY(-0.4rem); /* sorry */
 }
 
 .cart-item__delete {
