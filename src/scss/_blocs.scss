@@ -132,7 +132,7 @@
 
 		@include bp(xs) {
 			flex-basis: 85%;
-			text-align: center;
+			text-align: left;
 		}
 		@include bp(lg) {
 			flex-basis: 22%;
@@ -201,6 +201,7 @@
 
 				@include bp(lg){
 					flex-basis: 3.6rem;
+					width: 3.6rem;
 				}
 			}
 			.stats__number {
@@ -210,6 +211,7 @@
 
 				@include bp(lg){
 					flex-basis: calc(100% - 3.6rem);
+					width: calc(100% - 3.6rem);
 					padding-left: $gutter-quarter;
 				}
 
