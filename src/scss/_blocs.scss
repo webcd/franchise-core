@@ -185,10 +185,12 @@
 
 			@include bp(xs){
 				flex-basis: 50%;
+				justify-content: center;
 			}
 			@include bp(lg){
 				flex-basis: 100%;
 				text-align: left;
+				justify-content: space-between;
 
 				&:last-child { margin-top: $gutter-half; }
 			}
@@ -229,19 +231,19 @@
 		display: flex;
 		flex-wrap: wrap;
 		flex-grow: 1;
-		flex-shrink: 0;
+		flex-shrink: ;
 		flex-basis: 100%;
 		justify-content: flex-end;
 		margin: $gutter-half 0 0 0;
 
-		.btn { width: 100%; margin: $gutter-quarter; }
+		.btn { width: 100%; margin: $gutter-quarter; display: inline-block; }
 		span { text-align: center; font-size: 1.4rem; }
 
 		@include bp(xs) {
 			justify-content: center;
 			flex-grow: 1;
 			flex-shrink: 0;
-			flex-basis: auto;
+			flex-basis: 100%;
 
 			.btn { max-width: 22rem;  }
 			span { text-align: left; }
