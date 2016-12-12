@@ -112,7 +112,7 @@
 													border-bottom: 0.1rem solid $neutral-color;
 												}
 											}
-											@include bp('md') {
+											@include bp('sd') {
 												&:not(:nth-last-of-type(-n+2)) {
 													border-bottom: 0.1rem solid $neutral-color;
 												}
