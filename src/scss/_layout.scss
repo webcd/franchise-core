@@ -107,14 +107,15 @@
 
 									.wrapper--medium-items  {
 										article, .article {
-											@include bp('md', true) {
+											@include bp('xs', true) {
 												&:not(:last-child) {
 													border-bottom: 0.1rem solid $neutral-color;
 												}
 											}
-											@include bp('sd') {
-												&:not(:nth-last-of-type(-n+2)) {
-													border-bottom: 0.1rem solid $neutral-color;
+											@include bp('xs') {
+												border-bottom: 0.1rem solid $neutral-color;
+												&:nth-last-of-type(-n+2) {
+													border-bottom: none;
 												}
 											}
 
