@@ -99,6 +99,7 @@
 	flex-wrap: wrap;
 	padding: $gutter-half;
 	border: 0.3rem solid transparent;
+	cursor: pointer;
 
 	&:hover {
 		border: 0.3rem solid $color-secondary;
