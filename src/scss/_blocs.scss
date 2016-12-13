@@ -198,6 +198,8 @@
 				flex-shrink: 0;
 				flex-basis: 100%;
 				align-self: center;
+				text-align: center;
+				margin: 0 auto;
 
 				@include bp(lg){
 					flex-basis: 3.6rem;
