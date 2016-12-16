@@ -7,11 +7,11 @@
 									------------------------------------------------------------------------------------------------ */
 
 
-									body {
-										background: #f1f1f1;
-									}
+body {
+	background: #f1f1f1;
+}
 
-									.site-wrapper {
+.site-wrapper {
 	//position: relative;
 	background: white;
 
@@ -37,12 +37,13 @@
 .wrapper--content-info {
 	border-top: 0.1rem solid black;
 	padding: 0;
+	overflow: hidden;
 
 	img {
 		width: 100%;
 	}
 	p, h2 {
-		padding: 0 $gutter-double 0 $gutter;
+		//padding: 0 $gutter-double 0 $gutter;
 		line-height: 1.3;
 	}
 }
