@@ -1576,6 +1576,11 @@ body {
 		}
   }
 }
+body:not(:-moz-handler-blocked) {
+  .cart-content {
+    bottom: 0.1rem;
+  }
+}
 
 .cart-item {
   display: flex;
