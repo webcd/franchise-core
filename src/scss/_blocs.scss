@@ -165,6 +165,7 @@
 		padding: 0 $gutter-quarter 0 $gutter-half;
 		display: flex;
 		justify-content: center;
+		align-self: flex-start;
 
 		@include bp(lg){
 			border-left: 0.1rem solid $neutral-color-light;
@@ -231,6 +232,7 @@
 	}
 	.franchise-item__cta {
 		display: flex;
+		align-self: flex-start;
 		flex-wrap: wrap;
 		flex-grow: 1;
 		flex-shrink: 0;
