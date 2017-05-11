@@ -401,7 +401,7 @@ global TLF form override
 		}
   		select {
   			@extend .select;
-  			padding: 0 $gutter-half;
+  			padding: 0 $gutter-half !important;
 
   			@include bp('md'){
   				width: 80% !important;
