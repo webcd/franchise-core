@@ -250,6 +250,9 @@ input[type="button"] {
   line-height: 1;
   font-weight: 100;
   padding: $gutter-half $gutter $gutter-half $gutter-half;
+  @include bp(xs, true){ 
+    padding: $gutter-half $gutter-half $gutter-half $gutter-half; 
+  }
 
   svg {
     flex-grow: 0;
