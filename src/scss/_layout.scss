@@ -168,6 +168,11 @@ body {
 										 			text-transform: initial;
 										 			color: $gray-light;
 										 		}
+										 		.large-item__see-more {
+										 			color: $gray-light;
+
+										 			svg { fill: $gray-light; }
+										 		}
 										 		.large-item__link {
 										 			color: $color-secondary;
 										 		}
