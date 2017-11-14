@@ -1171,7 +1171,7 @@
 		&.owl-theme .owl-controls .owl-page span  {
 		    display: none;
 		}
-		.owl-nav {
+		.owl-buttons {
 			.owl-prev {
 				transform: rotate(180deg);
 				background: transparent !important;
@@ -1189,16 +1189,6 @@
 				fill: $color-secondary;
 			}
 		}
-	}
-}
-
-.owl-theme .owl-nav [class*='owl-'] {
-	opacity:0.5;
-  	filter:Alpha(Opacity=50);
-	  
-  	&:hover {
-		opacity: 1;
-	  	filter:Alpha(Opacity=100);
 	}
 }
 

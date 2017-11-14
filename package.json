@@ -8,9 +8,9 @@
   },
   "author": "Nicolas Giethlen",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+  },
   "dependencies": {
-    "batstroop": "git+https://github.com/webcd/batstroop.git",
-    "owl.carousel": "^2.2.0"
+    "batstroop": "git+https://github.com/webcd/batstroop.git"
   }
 }
