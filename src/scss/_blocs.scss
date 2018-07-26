@@ -1009,6 +1009,7 @@
 
 				border-left: 0.1rem solid transparent;
 				border-right: 0.1rem solid $color-primary;
+				text-align: center;
 			}
 			&:last-child a, &:last-child span { border-right: none; }
 			&:hover, &.activate {
