@@ -226,6 +226,43 @@ body {
 										 	}
 										 }
 
+										 .wrapper--mixed-list {
+											article, .article {
+												background: white;
+												border-bottom: 0.1rem solid $neutral-color;
+												@include transition(all .2s $ease-classic);
+												.large-item {
+													padding: $gutter-half $gutter;
+												}
+												.large-item__date {
+													text-transform: initial;
+													color: $gray-light;
+												}
+												.large-item__see-more {
+													color: $gray-light;
+
+													svg { fill: $gray-light; }
+												}
+												.large-item__title {
+													color: $color-primary;
+													text-transform: initial;
+												}
+
+												&:hover {
+													background: $color-primary;
+
+													.large-item,
+													.large-item__date,
+													.large-item__see-more,
+													.large-item__title {
+														color: white;
+														@include transition(all .2s $ease-classic);
+
+														svg { fill: white; }
+													}
+												}
+											}
+										}
 
 /* ------------------------------------------------------------------------------------------------
 										Hub
