@@ -232,7 +232,7 @@ body {
 												border-bottom: 0.1rem solid $neutral-color;
 												@include transition(all .2s $ease-classic);
 												.large-item {
-													padding: $gutter-half $gutter;
+													padding: $gutter $gutter $gutter-half 0;
 												}
 												.large-item__date {
 													text-transform: initial;
